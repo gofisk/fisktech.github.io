@@ -1,0 +1,654 @@
+
+<!doctype html> 
+<html>
+<head>
+	<title>Snow</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Chelsea+Market' rel='stylesheet' type='text/css'>
+</head>
+
+<style>
+
+img.bg {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1024px;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
+        z-index: -100;
+        top: 0;
+        left: 0;
+}
+
+h1 {
+	font-family: 'Helvetica', cursive;
+	color: #FFF;
+	font-size: 250px;
+	text-align: center;
+	line-height: 95px;
+	font-weight: light;
+	text-shadow: 5px 5px 5px #000;
+}
+
+h2 {
+font-family: 'Helvetica', cursive;
+color: #3c8d0d;
+padding-top: 100px;
+font-size: 175px;
+text-align: center;
+line-height: 95px;
+font-weight: light;
+text-shadow: 5px 5px 5px #000;
+}
+
+p {
+font-family: 'Helvetica', cursive;
+color: #F21313;
+padding-top: 100px;
+font-size: 100px;
+text-align: center;
+line-height: 95px;
+font-weight: light;
+text-shadow: 5px 5px 5px #000;
+}
+
+h3 {
+font-family: 'Helvetica', cursive;
+color: #FFF;
+font-size: 50px;
+text-align: center;
+line-height: 50px;
+font-weight: 100;
+margin-top: 150px;
+text-shadow: 5px 5px 5px #000;
+}
+
+@media screen and (max-width: 1024px) { /* Specific to this particular image */
+        img.bg {
+                left: 50%;
+                margin-left: -512px;   /* 50% */
+        }
+}
+
+html, body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 0;
+	margin: 0;
+	color: #333;
+}
+
+.bar {
+	background-color: #111;
+	color: #f0f0f0;
+	box-shadow: 0px 0px 2px #333;
+	line-height: 25px;
+	padding: 0px 20px;
+	opacity: 0.7;
+}
+.bar:hover {
+	opacity: 1;
+}
+.bar a {
+	color: #DDD;
+}
+.bar a:hover {
+	color: #FFFFFF;
+}
+
+a { color: #CCC; text-decoration: none; }
+a:hover { color: #FFFFFF; }
+	
+	#canvas {
+		border: 1px solid black;
+		position: absolute;
+		z-index: 10000;
+	}
+	
+	#flake {
+		color: #fff;
+		position: absolute;
+		font-size: 25px;
+		top: -50px;
+	}
+	
+	#page {
+		position: relative;
+	}
+	
+</style>
+
+
+<style>@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+
+
+html{ background:url(feedback-img.jpg) no-repeat;
+
+background-size: cover;
+
+height:100%;
+
+}
+
+
+
+#feedback-page{
+
+text-align:center;
+
+}
+
+
+
+#form-main{
+
+width:100%;
+
+float:left;
+
+padding-top:0px;
+
+}
+
+
+
+#form-div {
+
+background-color:rgba(72,72,72,0.4);
+
+padding-left:35px;
+
+padding-right:35px;
+
+padding-top:35px;
+
+padding-bottom:50px;
+
+width: 450px;
+
+float: left;
+
+left: 50%;
+
+position: absolute;
+
+margin-top:30px;
+
+margin-left: -260px;
+
+-moz-border-radius: 7px;
+
+-webkit-border-radius: 7px;
+
+}
+
+
+
+.feedback-input {
+
+color:#3c3c3c;
+
+font-family: Helvetica, Arial, sans-serif;
+
+font-weight:500;
+
+font-size: 18px;
+
+border-radius: 0;
+
+line-height: 22px;
+
+background-color: #fbfbfb;
+
+padding: 13px 13px 13px 54px;
+
+margin-bottom: 10px;
+
+width:100%;
+
+-webkit-box-sizing: border-box;
+
+-moz-box-sizing: border-box;
+
+-ms-box-sizing: border-box;
+
+box-sizing: border-box;
+
+border: 3px solid rgba(0,0,0,0);
+
+}
+
+
+
+.feedback-input:focus{
+
+background: #fff;
+
+box-shadow: 0;
+
+border: 3px solid #3498db;
+
+color: #3498db;
+
+outline: none;
+
+padding: 13px 13px 13px 54px;
+
+}
+
+
+
+.focused{
+
+color:#30aed6;
+
+border:#30aed6 solid 3px;
+
+}
+
+
+
+/* Icons ---------------------------------- */
+
+
+
+#comment{
+
+background-image: url(http://rexkirby.com/kirbyandson/images/comment.svg);
+
+background-size: 30px 30px;
+
+background-position: 11px 8px;
+
+background-repeat: no-repeat;
+
+}
+
+
+
+
+
+textarea {
+
+width: 100%;
+
+height: 150px;
+
+line-height: 150%;
+
+resize:vertical;
+
+}
+
+
+
+input:hover, textarea:hover,
+
+input:focus, textarea:focus {
+
+background-color:white;
+
+}
+
+
+
+#button-blue{
+
+font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+
+float:left;
+
+width: 100%;
+
+border: #fbfbfb solid 4px;
+
+cursor:pointer;
+
+background-color: #3498db;
+
+color:white;
+
+font-size:24px;
+
+padding-top:22px;
+
+padding-bottom:22px;
+
+-webkit-transition: all 0.3s;
+
+-moz-transition: all 0.3s;
+
+transition: all 0.3s;
+
+margin-top:-4px;
+
+font-weight:700;
+
+}
+
+
+
+#button-blue:hover{
+
+background-color: rgba(0,0,0,0);
+
+color: #0493bd;
+
+}
+
+
+
+.submit:hover {
+
+color: #3498db;
+
+}
+
+
+
+.ease {
+
+width: 0px;
+
+height: 74px;
+
+background-color: #fbfbfb;
+
+-webkit-transition: .3s ease;
+
+-moz-transition: .3s ease;
+
+-o-transition: .3s ease;
+
+-ms-transition: .3s ease;
+
+transition: .3s ease;
+
+}
+
+
+
+.submit:hover .ease{
+
+width:100%;
+
+background-color:white;
+
+}
+
+
+
+@media only screen and (max-width: 580px) {
+
+#form-div{
+
+left: 3%;
+
+margin-right: 3%;
+
+width: 88%;
+
+margin-left: 0;
+
+padding-left: 3%;
+
+padding-right: 3%;
+
+}
+
+
+
+}</style>
+
+<style class="cp-pen-styles">@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html, body{
+height: 100%;
+font-weight: 800;
+}
+
+body{
+font-family: Arial;
+}
+
+svg {
+display: block;
+font: 10em 'Montserrat';
+width: 960px;
+height: 500px;
+margin: 0 auto;
+}
+
+.text-copy {
+text-shadow: 2px 2px 2px #000;
+fill: none;
+stroke: white;
+stroke-dasharray: 6% 29%;
+stroke-width: 5px;
+stroke-dashoffset: 0%;
+animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1){
+stroke: #f21313;
+animation-delay: -1;
+}
+
+.text-copy:nth-child(2){
+stroke: #3C8D0D;
+animation-delay: -2s;
+}
+
+.text-copy:nth-child(3){
+stroke: #f21313;
+animation-delay: -3s;
+}
+
+.text-copy:nth-child(4){
+stroke: #3C8D0D;
+animation-delay: -4s;
+}
+
+.text-copy:nth-child(5){
+stroke: #f21313;
+animation-delay: -5s;
+}
+
+@keyframes stroke-offset{
+100% {stroke-dashoffset: -35%;}
+}</style>
+
+
+
+<script>
+
+window.open = function(){};
+
+window.print = function(){};
+
+// Support hover state for mobile.
+
+if (false) {
+
+window.ontouchstart = function(){};
+
+}
+
+</script>
+
+
+</head>
+<body>
+
+<svg viewBox="0 0 960 300">
+<symbol id="s-text">
+<text text-anchor="middle" x="50%" y="80%">Happy Holidays!</text>
+</symbol>
+
+<g class = "g-ants">
+<use xlink:href="#s-text" class="text-copy"></use>
+<use xlink:href="#s-text" class="text-copy"></use>
+<use xlink:href="#s-text" class="text-copy"></use>
+<use xlink:href="#s-text" class="text-copy"></use>
+<use xlink:href="#s-text" class="text-copy"></use>
+</g>
+</svg>
+
+
+
+<img src="snow.jpg" class="bg">
+
+<div id="page">
+
+
+
+
+
+    <script src='/assets/common/localstorage.js'></script>
+    
+    <script src='/assets/post/scroll/remember_scroll.js'></script>
+    
+    <script>RememberScroll.init();</script>
+    
+    
+    
+    <script>
+    
+    if (document.location.search.match(/type=embed/gi)) {
+    
+    window.parent.postMessage('resize', "*");
+    
+    }
+    
+    </script>
+    
+
+    
+
+	
+</div>
+
+	<div id = "flake"><img src="ZIRK.png" width="50"/></form></div>
+
+<script>
+
+
+var t = setInterval(
+	function(){
+		var documentHeight 		= $(document).height();
+		var startPositionLeft 	= Math.random() * $(document).width() - 100;
+		var startOpacity		= 0.5 + Math.random();
+		var sizeFlake			= 10 + Math.random() * 20;
+		var endPositionTop		= documentHeight - 40;
+		var endPositionLeft		= startPositionLeft - 100 + Math.random() * 200;
+		var durationFall		= documentHeight * 10 + Math.random() * 5000;
+		$('#flake')
+			.clone()
+			.appendTo('body')
+			.css(
+				{
+					left: startPositionLeft,
+					opacity: startOpacity,
+					'font-size': sizeFlake
+				}
+			)
+			.animate(
+				{
+					top: endPositionTop,
+					left: endPositionLeft,
+					opacity: 0.2
+				},
+				durationFall,
+				'linear',
+				function() {
+					$(this).remove()
+				}
+			);
+	}, 500);
+
+
+
+
+	var snow = {};
+	var snowflex = {};
+
+	snowflex.create  = function(){
+		var flex = document.createElement('div');
+			flex.innerHTML		 	= "&#10052;";
+			flex.style.fontSize 	= 10 + Math.random() * 20 + 'px';
+			flex.style.top 			= - 50 + Math.random() * 20 + 'px';
+			flex.style.left 		= Math.random() * 1500 + 'px';
+			flex.style.position 	= "absolute";
+			flex.style.color 		= "#F3F3F3";
+			flex.style.opacity		= Math.random();
+			document.getElementsByTagName('body')[0].appendChild(flex);
+			return flex;
+	};
+
+
+	snow.snowflex = function(){
+		var flex = snowflex.create();
+		var x = -1 + Math.random() * 2;
+		var t = setInterval( 
+					function(){
+						flex.style.top 	= parseInt(flex.style.top) +  5 + 'px';
+						flex.style.left = parseInt(flex.style.left) +  x + 'px';
+						if (parseInt(flex.style.top) > 1500) {
+							clearInterval(t);
+							document.getElementsByTagName('body')[0].removeChild(flex);
+						}			
+					}, 45 + Math.random() * 20);
+	};
+	
+	snow.storm = function(){
+		var t	= setInterval(
+					function(){
+						snow.snowflex();
+					}, 500);
+	};
+
+	//snow.storm();
+
+	var fog = {};
+
+	fog.draw = function(ctx, x, y){
+		
+			ctx.fillStyle = "rgba( 255, 255, 255, " + Math.random() + " )";
+			ctx.arc( x, y, 10,0,Math.PI*2,true);
+			ctx.closePath();
+			ctx.fill();
+
+	};
+
+
+	fog.start = function(){
+		var ctx = document.getElementById('canvas').getContext("2d");
+		var x = 0;
+		var y = 0;
+		var t = setInterval( 
+					function(){
+						
+						x = 300 + 300*Math.sin(x);
+						y = 300 + 300* -Math.cos(x);
+						 
+						x += 2;
+						fog.draw(ctx, x, y);
+
+					}, 100);
+		
+	};
+	
+	//fog.start();
+
+</script>
+
+
+</body>
+</html>
