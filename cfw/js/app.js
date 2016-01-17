@@ -130,7 +130,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 		}
 	})
 
-	.state('access.offline', {
+	/*.state('access.offline', {
 		url: '/offline',
 		views: {
 			'content': {
@@ -138,7 +138,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 				controller: "OfflineCtrl"
 			}
 		}
-	})
+	})*/
 
 	.state('access.forgotpassword', {
 		url: '/forgotpassword',
