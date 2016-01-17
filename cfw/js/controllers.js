@@ -7,16 +7,16 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 
 	//	$ionicLoading.hide();
 
-	/*function internetaccess(toState) {
+	function internetaccess(toState) {
 		if (navigator) {
 			if (navigator.onLine != true) {
-				onoffline = false;
+				onoffline = true;
 				$location.url("/access/offline");
 			} else {
 				onoffline = true;
 			}
 		}
-	}*/
+	}
     
 	$scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 		internetaccess(toState);
