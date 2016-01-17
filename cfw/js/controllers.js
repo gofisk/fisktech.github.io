@@ -10,8 +10,8 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 	function internetaccess(toState) {
 		if (navigator) {
 			if (navigator.onLine != true) {
-				onoffline = true;
-				$location.url("/access/offline");
+				onoffline = false;
+				$location.url("/app/events");
 			} else {
 				onoffline = true;
 			}
