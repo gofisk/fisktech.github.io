@@ -1,4 +1,4 @@
-var adminbase = "http://localhost/admin/";
+var adminbase = "http://fisktech.com/admin/";
 
 var adminurl = adminbase + "index.php/json/";
 var adminimage = adminbase + "uploads/";
