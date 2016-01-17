@@ -1,7 +1,7 @@
 <ion-view class="login-bg">
     <ion-content>
         <div class="login-logo light" ng-click="resize();">
-            Business<span class="bold positive">App</span>
+            CFW<span class="bold positive">MOBILE</span>
         </div>
         <div class="login-tab">
             <div class="button-bar" ng-show="logindata.email">
@@ -25,7 +25,7 @@
                     <button class="button button-block button-positive" ng-click="signinsubmit(signin);" ng-show="logindata.email">
                         Sign In
                     </button>
-                    <p class="light" ng-click="forgotpass()" ng-show="logindata.email">Forgot password?</p>
+                    <p class="light text-center" ng-click="forgotpass()" ng-show="logindata.email">Forgot password?</p>
                     <div class="or text-center" ng-show="logindata.facebook || logindata.twitter || logindata.google  || logindata.instagram">
                         <p ng-show="logindata.email">- OR -</p>
                     </div>

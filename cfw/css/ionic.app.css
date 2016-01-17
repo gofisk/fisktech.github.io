@@ -9223,11 +9223,7 @@ a:hover {
   margin-top: 15px !important; }
 
 .login-bg {
-  background: url("../img/login-bg.jpg") no-repeat center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
+  background-color: #c03; }
 
 .image-adjust {
   width: 50px;

@@ -17,7 +17,6 @@ angular.module('starter.controllers', ['starter.services', 'ion-gallery', 'ngCor
 			}
 		}
 	}
-    
 	$scope.$on('$stateChangeSuccess', function (event, toState, toParams, fromState, fromParams) {
 		internetaccess(toState);
 	});

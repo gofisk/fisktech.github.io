@@ -341,7 +341,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 	});
 
 	// if none of the above states are matched, use this as the fallback
-	$urlRouterProvider.otherwise('/app/home');
+    //This is the default when app is opened
+	$urlRouterProvider.otherwise('/app/events');
 
 })
 
