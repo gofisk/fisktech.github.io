@@ -215,12 +215,21 @@
                 onClick: function (item) {
 
                     // href key gets added inside item from options.href configuration
-                    document.location.href = (item.href);
+                          window.location.href = (data);
 
                 }
             },
             debug: true
         });
+        
+        $('.typeahead').typeahead({
+                                  minLength:2,
+                                  updater: function (item) {
+                                  /* navigate to the selected item */
+                                  window.location.href = item;
+                                  },
+                                  source: links
+                                  });
 
     </script>
 

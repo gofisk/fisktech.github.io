@@ -3,10 +3,19 @@ h2 {
     margin-bottom: 0px;
 }
 
-#content {
-    text-align: center;
+#wrapper {
+    width: 900px;
     margin: auto;
-    width: 600px;
+}
+
+#info {
+    float:left;
+    width: 300px;
+}
+
+#links {
+    margin-right: 50px;
+    width: 100%;
 }
 
 hr {
