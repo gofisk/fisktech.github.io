@@ -190,6 +190,6 @@ a:after {
 
 @media screen and (max-width: 475px) {
     #section-about img {
-        width: 300px;
+        width: 95%;
     }
 }
