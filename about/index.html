@@ -1,251 +1,87 @@
-
 <!DOCTYPE html>
-<html >
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="google" value="notranslate">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Scott Fisk">
+    <meta name="author" content="Scott Fisk">
+
     <title>SCOTT FISK</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Raleway:200,900|Over+the+Rainbow' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, user-scalable=no">
+
+    <!-- BOOTSTRAP CORE -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- CUSTOM CFW STYLES -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/smooth_scroll.js"></script>
+
+
+    <!-- HTML5 SHIM AND RESPOND.JS IE8 HTML5 AND MEDIA QUERY SUPPORT -->
+    <!-- INTERNET EXPLORER IS THE WORST, BUT THIS WILL MAKE IT WORK -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
     
 
-    
-        <style>
-      *, *:before, *:after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 21px;
-  font-family: 'Open Sans';
-}
-
-html, body {
-  height: 100%;
-}
-
-h1 {
-  font-family: 'Raleway';
-  font-size: 2.7em;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: -2px;
-  color: #222;
-  margin-bottom: .3em;
-}
-
-p {
-  font-weight: 200;
-  color: #525252;
-}
-
-.fl {
-  float: left;
-  margin: 20px;
-}
-
-.fr {
-  float: right;
-  margin: 20px;
-}
-
-.hero {
-  width: 40%;
-  height: 100%;
-  position: fixed;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, transparent 30%), url(http://fillmurray.com/1050/1050);
-  background-size: cover;
-  background-position: center 30%;
-}
-.hero .hamb-wrap {
-  height: 30px;
-  width: 40px;
-  position: absolute;
-  top: 25px;
-  left: 25px;
-  cursor: pointer;
-  z-index: 2;
-}
-.hero .hamb {
-  height: 3px;
-  width: 35px;
-  background: #fff;
-  position: absolute;
-  top: 10px;
-  left: 0;
-  transition: 0.2s;
-  border-radius: 10% 10% 10% 10% / 40% 40% 40% 40%;
-}
-.hero .hamb:before, .hero .hamb:after {
-  content: '';
-  position: absolute;
-  background: #fff;
-  height: 3px;
-  width: 100%;
-  transition: 0.2s;
-  border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
-}
-.hero .hamb:before {
-  top: 8px;
-}
-.hero .hamb:after {
-  top: -8px;
-}
-.hero .active {
-  background: none;
-  transition: 0.2s;
-}
-.hero .active:before, .hero .active:after {
-  transition: 0.2s;
-  top: 0;
-}
-.hero .active:before {
-  transform: rotate(45deg);
-}
-.hero .active:after {
-  transform: rotate(-45deg);
-}
-.hero .logo {
-  color: white;
-  font-family: 'Over the Rainbow';
-  font-size: 1.9em;
-  margin: 0 0 0 85px;
-}
-.hero nav {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  padding-top: 60px;
-  font-family: 'Raleway';
-  font-size: 2em;
-  display: none;
-  background: rgba(0, 0, 0, 0.8);
-}
-.hero nav ul {
-  margin: 0 0 0 25px;
-  padding: 0;
-}
-.hero nav li {
-  list-style-type: none;
-  margin: 25px 0;
-  position: relative;
-}
-.hero nav a {
-  text-decoration: none;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-.content {
-  width: 60%;
-  min-height: 100%;
-  margin-left: 40%;
-  padding: 4em 1.5em;
-  overflow: hidden;
-}
-
-@media (max-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-
-  .hero {
-    height: 350px;
-    width: 100%;
-    display: block;
-    position: relative;
-    padding: 1px;
-  }
-  .hero nav {
-    font-size: 1.7em;
-  }
-
-  .content {
-    margin-left: 0;
-    padding-top: 0;
-    width: 100%;
-  }
-}
-@media (max-width: 480px) {
-  img.fl, img.fr {
-    float: none;
-    margin: 10px 0;
-    width: 100%;
-    height: auto;
-  }
-}
-
-    </style>
-
-    <script>
-  window.console = window.console || function(t) {};
-</script>
-
-        <script src="//assets.codepen.io/assets/libs/prefixfree.min-d258f6cb24f3a877e4fb83b348ec8a3f.js"></script>
-
-    
   </head>
 
   <body>
 
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300|Raleway:200,900|Over+the+Rainbow' rel='stylesheet' type='text/css'>
-<meta name="viewport" content="width=device-width, user-scalable=no">
-  
-<header>
-  <div class="hero">
-    <div class="hamb-wrap">
-      <div class="hamb"></div>
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="navbar-title" href="#"><span>SCOTT</span>FISK</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="mailto:admin@scottfisk.org"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="https://facebook.com/gofisk"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/betafisk"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
     </div>
-    <p class="logo">Bill Murray</p>
-    <nav>
-      <ul>
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">CV</a>
-        </li>
-        <li>
-          <a href="#">Blog</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</header>
-<section class="content">
-  <h1>Page Name</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam vitae officiis distinctio libero deleniti dolorem quae vero nemo modi cupiditate delectus quo iure pariatur nulla doloremque odio  minima beatae totam! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam itaque nemo cupiditate commodi velit praesentium perspiciatis nesciunt quas eveniet alias porro veritatis sit cum est necessitatibus possimus illum qui recusandae optio vel illo amet unde quidem perferendis consequatur officiis provident ex impedit repellat fuga enim eum a voluptatibus sequi voluptas soluta voluptatem corrupti minus accusamus ea accusantium laboriosam?</p>
-  <img /><img src="http://placehold.it/500x500&text=Image 2" class="fr" height="250" width="250"/><p>Eum sapiente architecto natus ducimus a placeat expedita dolore debitis amet omnis excepturi pariatur libero similique nobis neque sit perferendis mollitia quibusdam corporis atque illo. Excepturi repellendus architecto voluptates numquam cum tempora natus eligendi itaque labore provident deserunt incidunt commodi iste sint rem non et sapiente nesciunt debitis sit eius ad necessitatibus sequi totam illum doloremque officia similique est minus dignissimos distinctio placeat ipsa aut illo aliquid beatae iure!</p>
-  <p>Repellendus cupiditate voluptatibus eius sequi id corrupti tempore consectetur explicabo deleniti voluptate distinctio quae accusamus ipsum placeat tenetur dolorem nesciunt? Earum cum dicta libero quia qui culpa fuga nulla adipisci natus nesciunt! Impedit ut hic quisquam quos id. Dolorum eos assumenda ducimus illum quisquam doloribus culpa nisi ab amet quo quibusdam ipsa inventore vitae iste mollitia animi odio reiciendis cum non autem ea nihil nobis laborum harum recusandae error rerum facere asperiores officia cupiditate eveniet enim distinctio ex debitis nostrum obcaecati omnis. Aut ex recusandae sapiente saepe deserunt omnis quasi consequuntur excepturi atque sunt distinctio repellendus ipsam itaque explicabo sint tempora necessitatibus nulla amet veritatis mollitia id adipisci facere quisquam animi quaerat commodi ipsum modi eligendi vel maiores voluptatem dolores ab asperiores.</p>
-  <img src="http://placehold.it/500x500&text=Image 2" class="fl" height="250" width="250"/><p>Veniam tempora impedit sunt excepturi nisi expedita corporis voluptatum quod eum dolores cupiditate quo odit iure doloribus corrupti molestias minus nihil temporibus accusamus ex. Cumque pariatur deleniti ipsam ea cum asperiores non suscipit natus. Molestias enim optio perferendis voluptatibus suscipit laborum officia cupiditate similique illum reprehenderit porro natus soluta modi facilis eligendi illo aspernatur nemo fugit sequi facere a quo iure eaque rem omnis et voluptatem quibusdam excepturi nihil. Commodi incidunt quos voluptatum sunt explicabo nobis perferendis vel iusto excepturi cupiditate blanditiis magni placeat autem dignissimos dolor maxime soluta qui voluptate esse obcaecati in tempora est molestias harum adipisci ex deleniti nesciunt odio aspernatur facilis provident laborum eum veniam quis sapiente expedita corporis possimus aut recusandae voluptas nihil a.</p>
-  <p>Necessitatibus libero officia quaerat earum at ullam itaque dolorum. Eligendi illo culpa non quas sit commodi autem assumenda necessitatibus hic deserunt error quam reiciendis consequatur odio quo nostrum nam odit explicabo praesentium dolorum repellat ipsum placeat doloremque neque fugiat sapiente temporibus ad quis provident vitae maiores magnam numquam magni cum impedit dolorem animi voluptas qui deleniti sint. Obcaecati deserunt distinctio sapiente voluptate illo recusandae ad quod tenetur facere doloribus at perspiciatis beatae provident facilis reprehenderit dolorum ut aut dolor temporibus aperiam sunt quae vero modi magnam possimus sequi omnis aliquam. Rerum culpa vel voluptatem nihil aperiam temporibus mollitia odit earum quos rem placeat deleniti illum ea repellendus quisquam odio reprehenderit maxime provident quasi aliquam magnam autem reiciendis est dolorum similique facilis possimus adipisci modi quibusdam ipsam! Quia esse quae vero assumenda voluptatem!</p>
-</section>
-      <script src="//assets.codepen.io/assets/common/stopExecutionOnTimeout-f961f59a28ef4fd551736b43f94620b5.js"></script>
-
-    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-
-        <script>
-      $('.hamb-wrap').on('click', function () {
-    $(this).parent().children('p').toggle();
-    $(this).children().toggleClass('active');
-    $('nav').fadeToggle(200);
-});
-      //@ sourceURL=pen.js
-    </script>
-
     
-    <script>
-  if (document.location.search.match(/type=embed/gi)) {
-    window.parent.postMessage("resize", "*");
-  }
-</script>
+	
+	<div id="section-about">
+		<div class="container">
+			<div class="row">
+                <div class="col-lg-5 centered">
+                    <img src="assets/img/ME.png" alt="Picture of Scott Fisk">
+                        </div>
+				<div class="col-lg-7 centered">
+					<p><span>Who is the handsome guy in that picture?</span> My name is Scott Fisk. I am a sophomore in Management Information Systems at Iowa State University in Ames, Iowa! I have always had a passion for technology and love to use my skills to teach others! I work with the LAS College Information Technology Team. In my spare time I enjoy programming, web design, creating animations/graphics and playing the piano!</p>
+                    <p><span>Not sure where you've seen me before?</span> At Iowa State University, I am the Director of IT for the Inter-Residence Hall Association and I am the Vice-President of Technology/Communications for Cyclone Family Weekend. I am also involved with the Information Assurance Group and Management Information Systems Club. I am also a volunteer instructor at the Ames Public Library where I teach programming to K-5 students.
+				</div>
+			</div>
+		</div>
+	</div>
 
-    
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<p>Made with <i class="fa fa-heart"></i> by Scott Fisk</p>
+			</div>
+		</div>
+	</div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.js"></script>
   </body>
 </html>
- 
