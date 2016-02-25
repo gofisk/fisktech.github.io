@@ -34,6 +34,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #333;
 }
 
+#icons {
+    font-size: 25px;
+}
+
 
 /* Paragraph & Typographic */
 p {
