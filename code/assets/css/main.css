@@ -149,6 +149,15 @@ a:after {
     border-color: transparent;
 }
 
+.btn-light {
+    color: #ffffff;
+    background-color: #a2252e;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 5px 15px;
+    border-color: transparent;
+}
+
 .lead {
 	letter-spacing: 1px;
 }
