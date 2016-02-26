@@ -181,6 +181,10 @@ a:after {
     color: white;
 }
 
+#content img {
+    width: 90%
+}
+
 #info h1 {
     color: #cc2e3a;
     background-color: #ffffff;
