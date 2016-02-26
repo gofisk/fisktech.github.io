@@ -18,7 +18,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
     
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 /*==============*/
@@ -146,6 +146,15 @@ a:after {
     font-weight: 800;
     font-size: 25px;
     padding: 5px 15px;
+    border-color: transparent;
+}
+
+.topbar {
+    color: #ffffff;
+    background-color: #2eccc0;
+    font-weight: 800;
+    font-size: 25px;
+    padding-top: 20px;
     border-color: transparent;
 }
 
