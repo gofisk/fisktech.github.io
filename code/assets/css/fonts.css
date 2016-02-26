@@ -1,0 +1,16 @@
+@font-face {
+    font-family: Univers;
+    src: url("../fonts/Univers.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: bold;
+    src: url("../fonts/Univers-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: lighter;
+    src: url("../fonts/Univers-Light.otf") format("opentype");
+}

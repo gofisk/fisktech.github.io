@@ -1,46 +1,126 @@
-
 <!DOCTYPE html>
-<head><meta charset='UTF-8'>
-<title>GO > CODE</title>
-<link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-<link rel="icon" type="image/png" href="assets/favicon.png" />
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.7/css/bootstrap-material-design.css">
-</head>
-<body>
-<div id="wrapper">
-<div id="info">
-    <img src="assets/info.png" width="300px;">
-</div>
-<div id="links">
-<h1>Start Here</h1>
-<button class="btn btn-raised"><a href="http://learn.code.org/s/course1/stage/3/puzzle/1">K</a></button>&nbsp;|&nbsp;
-<button class="btn btn-raised"><a href="http://learn.code.org/s/course1/stage/3/puzzle/1">1</a></button>&nbsp;|&nbsp;
-<button class="btn btn-raised"><a href="http://learn.code.org/s/course2/stage/3/puzzle/1">2</a></button>&nbsp;|&nbsp;
-<button class="btn btn-raised"><a href="http://learn.code.org/s/course2/stage/3/puzzle/1">3</a></button>&nbsp;|&nbsp;
-<button class="btn btn-raised"><a href="https://code.org/learn">4</a></button>&nbsp;|&nbsp;
-<button class="btn btn-raised"><a href="https://code.org/learn">5</a></button>
-<hr>
-<h2>K-1st Grade</h2>
-    <button class="btn btn-raised"><a href="http://thefoos.com/webgl/">The Foos</a></button></li>
-    <button class="btn btn-raised"><a href="http://code.org/learn">Hour of Code</a></button></li>
-<h2>2nd Grade</h2>
-    <button class="btn btn-raised"><a href="http://www.tynker.com/hour-of-code/">Tynker</a></button></li>
-    <button class="btn btn-raised"><a href="http://code.org/learn">Hour of Code</a></button></li>
-<h2>3rd Grade</h2>
-    <button class="btn btn-raised"><a href="http://code.org/learn">Hour of Code</a></button></li>
-    <!--<li><a href="https://bitsbox.com/">Bitsbox</a></li>-->
-    <button class="btn btn-raised"><a href="http://scratch.mit.edu/projects/editor/?tip_bar=getStarted">Scratch</a></button></li>
-<h2>4th-5th Grade</h2>
-    <!--<li><a href="http://code.org/learn">Hour of Code - Intro to Java</a></li>-->
-    <button class="btn btn-raised"><a href="http://scratch.mit.edu/projects/editor/?tip_bar=getStarted">Scratch</a></button></li>
-    <button class="btn btn-raised"><a href="https://www.madewithcode.com/projects">Made With Code</a></button></li>
-<h2>Advanced</h2>
-    <button class="btn btn-raised"><a href="https://www.khanacademy.org/computing/computer-programming">Khan Academy</a></button></li>
-    <br />
-    <hr>
-<button class="btn btn-raised"><a href="/code/coppa">COPPA Compliance</a></button>
-</div>
-</div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coding For Kids at the Ames Public Library">
+    <meta name="author" content="Scott Fisk">
+
+    <title>GO / CODE</title>
+
+    <!-- BOOTSTRAP CORE -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+
+    <!-- CUSTOM CFW STYLES -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+        
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/accordion.js"></script>
+
+
+    <!-- HTML5 SHIM AND RESPOND.JS IE8 HTML5 AND MEDIA QUERY SUPPORT -->
+    <!-- INTERNET EXPLORER IS THE WORST, BUT THIS WILL MAKE IT WORK -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="navbar-title" href="#"><span>GO / </span>CODE</a>
+        </div><!--/.navbar-header -->
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right" id="icons">
+            <li><a href="http://gofisk.com"><i class="fa fa-home"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div><!--/.container -->
+    </div><!--/.navbar -->
+    
+	<div id="content">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 centered">
+                        <ul class="list-group" id="list-group-accordion">
+                            <li class="list-group-item">
+                                <h2 class="list-group-heading" data-toggle="collapse" data-target="#item-one" data-parent="#list-group-accordion">Kindergarten + 1st Grade<i class="fa fa-chevron-right pull-right"></i></h2>
+                                <div id="item-one" class="collapse">
+                                    <a href="http://thefoos.com/webgl/" class="btn btn-theme btn-block">The Foos</a>
+                                    <a href="http://code.org/learn" class="btn btn-theme btn-block">Hour of Code</a>
+                                </div><!--/#itemone -->
+                            </li>
+                            <li class="list-group-item">
+                                <h2 class="list-group-heading" data-toggle="collapse" data-target="#item-two" data-parent="#list-group-accordion">2nd Grade<i class="fa fa-chevron-right pull-right"></i></h2>
+                                <div id="item-two" class="collapse">
+                                    <a href="http://www.tynker.com/hour-of-code/" class="btn btn-theme btn-block">Tynker</a>
+                                    <a href="http://code.org/learn" class="btn btn-theme btn-block">Hour of Code</a>
+                                </div><!--/#itemtwo -->
+                            </li>
+                            <li class="list-group-item">
+                                <h2 class="list-group-heading" data-toggle="collapse" data-target="#item-three" data-parent="#list-group-accordion">3rd Grade<i class="fa fa-chevron-right pull-right"></i></h2>
+                                <div id="item-three" class="collapse">
+                                    <a href="http://code.org/learn" class="btn btn-theme btn-block">Hour of Code</a>
+                                    <a href="http://scratch.mit.edu/projects/editor/?tip_bar=getStarted" class="btn btn-theme btn-block">Scratch</a>
+                                </div><!--/#itemthree -->
+                            </li>
+                            <li class="list-group-item">
+                                <h2 class="list-group-heading" data-toggle="collapse" data-target="#item-four" data-parent="#list-group-accordion">4th + 5th Grade<i class="fa fa-chevron-right pull-right"></i></h2>
+                                <div id="item-four" class="collapse">
+                                    <a href="http://scratch.mit.edu/projects/editor/?tip_bar=getStarted" class="btn btn-theme btn-block">Scratch</a>
+                                    <a href="https://www.madewithcode.com/projects" class="btn btn-theme btn-block">Made With Code</a>
+                                </div><!--/#itemfour -->
+                            </li>
+                            <li class="list-group-item">
+                                <h2 class="list-group-heading" data-toggle="collapse" data-target="#item-five" data-parent="#list-group-accordion">Advanced<i class="fa fa-chevron-right pull-right"></i></h2>
+                                <div id="item-five" class="collapse">
+                                    <a href="https://www.khanacademy.org/computing/computer-programming" class="btn btn-theme btn-block">Khan Academy</a>
+                                </div><!--/#itemfive -->
+                            </li>
+                        </ul>
+				</div><!--/.col-md-8 -->
+                <div id="info" class="col-md-4 centered">
+                    <h1>Coding For Kids</h1>
+                    <div class="col-md-6">
+                        <p><span>K-2nd Grade: </span><br />Feb. <span>3</span> &amp; <span>17</span>, <br />March <span>2</span> &amp; <span>23</span>, <br />April <span>6</span> &amp; <span>20</span></p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><span>3rd-5th Grade: </span><br />Feb. <span>10</span> &amp; <span>24</span>, <br />March <span>9</span> &amp; <span>30</span>, <br />April <span>13</span> &amp; <span>27</span></p>
+                    </div>
+                    <img src="assets/img/logo.png" alt="Ames Public Library Logo">
+                    <div id="legal">
+                        <a href="#">COPPA Compliance</a>
+                    </div><!--/#legal -->
+                </div><!--/#info -->
+			</div><!--/.row -->
+		</div><!--/.container-->
+	</div><!--/#content -->
+
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<p>Made with <i class="fa fa-heart"></i> by Scott Fisk</p>
+			</div><!--/.row -->
+		</div><!--/.container -->
+	</div><!--/#footer -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.js"></script>
+  </body>
 </html>
