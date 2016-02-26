@@ -1,82 +1,120 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"><![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"><![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
-<head>
-<meta charset="UTF-8">
-<title>FISK LABS</title>
-<meta name="description" content="">
-<meta name="keywords" content="">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72.png">
-<link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
-<link rel="shortcut icon" href="images/ico/favicon.png">
-<!--[if IE]><![endif]-->
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery.js"></script>
-<script src="js/countdown.js"></script>
-<script src="js/owlcarousel.js"></script>
-<script src="js/uikit.scrollspy.js"></script>
-<script src="js/scripts.js"></script>
-<!--[if lt IE 9]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-</head>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Scott Fisk">
+    <meta name="author" content="Scott Fisk">
 
-<body id="backtotop">
-    <body onload="myFunction()">
+    <title>SCOTT FISK</title>
 
-<div class="fullwidth clearfix">
-	<div id="topcontainer" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
-		
-		<p><span class="fa fa-signal"></span></p>
-		<h1>FISK<span>LABS</span></h1>
-		<p>The future is already here.</p>
-		
-	</div>
-</div>
+    <!-- BOOTSTRAP CORE -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
 
-<div class="arrow-separator arrow-white"></div>
-
-<div class="fullwidth colour1 clearfix">
-    <div id="countdown" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+    <!-- CUSTOM CFW STYLES -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <link href="assets/css/fonts.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
         
-        <SCRIPT LANGUAGE="JavaScript">
-            <!--
-            document.write("<center><font size=+1><b>")
-            now = new Date()
-            if (now.getDay() == 5)
-            document.write("Smile, It's Friday!!!")
-            
-            if (now.getDay() == 6)
-            document.write("Have a great weekend!")
-            
-            if (now.getDay() == 0)
-            document.write("It's Sunday. Relax & Enjoy.")
-            
-            if (now.getDay() == 1)
-            document.write("It's Monday. It could be worse.")
-            
-            if (now.getDay() == 2)
-            document.write("It's Tuesday. You got past Monday!!")
-            
-            if (now.getDay() == 3)
-            document.write("It's Wednesday! Half way there!")
-            
-            if (now.getDay() == 4)
-            document.write("The weekend is almost here!")
-            document.write("</b></center></font>")
-            </SCRIPT>
-    </div>
-</div>
-<div class="fullwidth clearfix">
-	<div id="footercont" class="bodycontainer clearfix" data-uk-scrollspy="{cls:'uk-animation-fade', delay: 300, repeat: true}">
+    <!-- EXTERNAL JAVASCRIPT -->
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="assets/js/smooth_scroll.js"></script>
 
-		<p>Copyright &copy; <script> document.write(new Date().getFullYear()) </script> - <a href="http://fisklabs.org">Scott Fisk</a></p>
-        <div class="txtUpsideDown"></div>
+
+    <!-- HTML5 SHIM AND RESPOND.JS IE8 HTML5 AND MEDIA QUERY SUPPORT -->
+    <!-- INTERNET EXPLORER IS THE WORST, BUT THIS WILL MAKE IT WORK -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
+
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a id="navbar-title" href="#"><span>SCOTT</span>FISK</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right" id="icons">
+            <li><a href="mailto:admin@scottfisk.org"><i class="fa fa-envelope"></i></a></li>
+            <li><a href="https://facebook.com/gofisk"><i class="fa fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/betafisk"><i class="fa fa-twitter"></i></a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    
+    <div class="content" id="section-code">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1><span>/</span>CODE</h1>
+                    <a href="#">http://gofisk.com/code</a>
+                </div>
+                <div class="col-md-9">
+                    <p><span>Site Description: </span>This site was built to support a computer programming class that I teach at the Ames Public Library in Ames, Iowa. The class is called Coding for Kids and focuses on teaching programming basics to students in grades K-5. This site contains links to online resources and interactive coding activites. I sorted these links by grade level for convenience.</p>
+                    <a href="code" class="btn btn-block btn-theme">Enter Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content" id="section-dev">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1><span>/</span>DEV</h1>
+                    <a href="#">http://gofisk.com/dev</a>
+                </div>
+                <div class="col-md-9">
+                    <p><span>Site Description: </span>This site is my sandbox to play around with the latest web technologies. When I am working on a project for a client, I will host code in this directory so that clients can interact with and test new features. All code in this directory is available on Github.</p>
+                    <a href="dev" class="btn btn-block btn-theme">Enter Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content" id="section-about">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1><span>/</span>ABOUT</h1>
+                    <a href="#">http://gofisk.com/about</a>
+                </div>
+                <div class="col-md-9">
+                    <p><span>Site Description: </span>This page contains a brief overview of who I am, as well as a picture of me for reference. This page is a work in progress, but will eventually host an interactive resume. </p>
+                    <a href="about" class="btn btn-block btn-theme">Enter Site</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+
+
+	<div id="footer">
+		<div class="container">
+			<div class="row">
+				<p>Made with <i class="fa fa-heart"></i> by Scott Fisk</p>
+			</div>
+		</div>
 	</div>
-</div>
-   
-</body>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.js"></script>
+  </body>
 </html>

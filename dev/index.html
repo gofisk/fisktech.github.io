@@ -1,163 +1,41 @@
-
-<!DOCTYPE html><html class=''>
-    <head><meta charset='UTF-8'><meta name="robots" content="noindex">
-        <title>GOFISK-DEV</title>
-        <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
-        <link rel="icon" type="image/png" href="../assets/favicon.png" />
-        
-        
-        <style class="cp-pen-styles">* {
-            margin: 0;
-            padding: 0;
-            background: #000;
-        }
-        
-        .header {
-            margin-left: 15px;
-            padding-bottom: 25px;
-            font-size: 50px;
-            font-family: 'Sarpanch', sans-serif;
-        }
-        
-        .terminal {
-            position: absolute;
-            width: 90%;
-            height: 100%;
-            font-family: 'Share Tech', sans-serif;
-            color: #88ff00;
-        }
-        
-        .terminal-line {
-            display: block;
-            margin-left: 20px;
-            margin-top: 6px;
-            letter-spacing: 2.5px;
-            font-size: 20px;
-        }
-        
-        .light {
-            color: #777;
-        }
-        
-        .dark {
-            color: #333;
-        }
-        
-        A,
-        .highlight {
-            color: red;
-        }</style></head><body>
-            <link href='http://fonts.googleapis.com/css?family=Sarpanch:400,600' rel='stylesheet' type='text/css'>
-                <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
-                <div class="terminal">
-                <div class="header">
-                <h1><span class="dark">/</span><span class="light">dev</span></h1>
-                </div>
-                <span terminal=1 class="terminal-line">
-                <span class="instant">
-                Loading...
-                </span>[Ok]<br /><br />-----<br /><br />
-                <span class="clear"></span>
-                My name is <span class="highlight">Scott Fisk</span>.
-                <br /><br />
-                I am a sophomore at [<a href="http://iastate.edu">Iowa State University</a>] in [<a href="http://iastate.edu">Ames, Iowa</a>].
-                <br/> I study [<a href="http://www.business.iastate.edu/undergraduate/prospective-students/choosing-your-major/management-information-systems/">Management Information Systems</a>] in the [<a href="http://www.business.iastate.edu/">College of Business</a>].
-                <br /><br />
-                I [<a href="https://www.it.iastate.edu/">fix computers & stuff</a>] for the [<a href="https://www.las.iastate.edu/">College of Liberal Arts & Sciences</a>].
-                <br /><br />
-                I am the Director of IT for the [<a href="https://irha.iastate.edu/">Inter-Residence Hall Association</a>].
-                <br/> I am the Vice President of Technology/Communications for [<a href="http://www.familyweekend.iastate.edu/">Cyclone Family Weekend</a>].
-                <br /><br />
-                I would love to hear from you. Shoot me a quick [<a href="mailto:admin@scottfisk.org">Email</a>] or find me on the [<a href="https://www.google.com">interwebs</a>].
-                </span>
-                </div>
-                <script src='//assets.codepen.io/assets/common/stopExecutionOnTimeout.js?t=1'></script>
-                <script>
-                // TERMINAL TYPING CODE BY STEVE DEKORTE
-                
-                function getAllElementsWithAttribute(attribute)
-                {
-                var matchingElements = [];
-                
-                var allElements = document.getElementsByTagName('span');
-                
-                for (var i = 0, n = allElements.length; i < n; i++)
-                {
-                if (allElements[i].getAttribute(attribute))
-                {
-                matchingElements.push(allElements[i]);
-                }
-                }
-                return matchingElements;
-                }
-                
-                var terminalElements = getAllElementsWithAttribute("terminal");
-                
-                function terminals_init()
-                {
-                var elements = terminalElements;
-                for (var i = 0; i < elements.length; i++)
-                {
-                var e = elements[i]
-                e.completeHTML = e.innerHTML
-                e.innerHTML = ""
-                e.i = 0
-                }
-                
-                }
-                
-                function terminals_start()
-                {
-                //terminalIntervalFunction = function(){ terminals_next() }
-                //setInterval(terminalIntervalFunction, 1000/60);
-                terminals_next()
-                }
-                
-                function terminals_next()
-                {
-                var done = true
-                var elements = terminalElements;
-                
-                for (var i = 0; i < elements.length && done == true; i++)
-                {
-                var e = elements[i]
-                
-                e.i ++
-                
-                if (e.innerHTML.length >= e.completeHTML.length)
-                {
-                e.innerHTML = e.completeHTML
-                }
-                else
-                {
-                var s =  e.completeHTML.substring(0, e.i) 
-                
-                if (s.slice(-1) == " ") 
-                {
-                if(e.innerHTML.length % 6 == 0 ) { s = s + "" } else { s = s + "|" }
-                }
-                else
-                {
-                s = s + "|"
-                }
-                
-                e.innerHTML = s
-                e.parentNode.style.display = 'none'
-                e.parentNode.style.display = 'block'
-                done = false
-                }
-                }
-                
-                if (!done)
-                {
-                //window.clearInterval(terminalIntervalFunction)
-                setTimeout(terminals_next, 150/20)
-                }
-                }
-                
-                terminals_init()
-                
-                window.onload = function() { terminals_start() };
-                </script>
-                
-                </body></html>
+<!DOCTYPE html>
+<html class=''>
+   <head>
+      <meta charset='UTF-8'>
+      <meta name="robots" content="noindex">
+      <title>GO / DEV</title>
+      <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+      <link rel="icon" type="image/png" href="../assets/favicon.png" />
+      <link href='assets/css/style.css' rel='stylesheet' type='text/css'>
+       
+      <!--CUSTOM FONTS-->
+      <link href='http://fonts.googleapis.com/css?family=Sarpanch:400,600' rel='stylesheet' type='text/css'>
+      <link href='http://fonts.googleapis.com/css?family=Share+Tech' rel='stylesheet' type='text/css'>
+   </head>
+   <body>
+      
+      <div class="terminal">
+         <div class="header">
+            <h1><span class="dark">/</span><span class="light">dev</span></h1>
+         </div>
+         <span terminal=1 class="terminal-line">
+         <span class="instant">
+         Loading...
+         </span>[Ok]<br /><br />-----<br /><br />
+         <span class="clear"></span>
+         My name is <span class="highlight">Scott Fisk</span>.
+         <br /><br />
+         I am a sophomore at [<a href="http://iastate.edu">Iowa State University</a>] in [<a href="http://iastate.edu">Ames, Iowa</a>].
+         <br/> I study [<a href="http://www.business.iastate.edu/undergraduate/prospective-students/choosing-your-major/management-information-systems/">Management Information Systems</a>] in the [<a href="http://www.business.iastate.edu/">College of Business</a>].
+         <br /><br />
+         I [<a href="https://www.it.iastate.edu/">fix computers & stuff</a>] for the [<a href="https://www.las.iastate.edu/">College of Liberal Arts & Sciences</a>].
+         <br /><br />
+         I am the Director of IT for the [<a href="https://irha.iastate.edu/">Inter-Residence Hall Association</a>].
+         <br/> I am the Vice President of Technology/Communications for [<a href="http://www.familyweekend.iastate.edu/">Cyclone Family Weekend</a>].
+         <br /><br />
+         I would love to hear from you. Shoot me a quick [<a href="mailto:admin@scottfisk.org">Email</a>] or find me on the [<a href="https://www.google.com">interwebs</a>].
+         </span>
+      </div>
+      <script src="assets/js/typewriter.js"></script>
+   </body>
+</html>
