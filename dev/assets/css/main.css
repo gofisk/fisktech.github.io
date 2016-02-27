@@ -248,6 +248,7 @@ a:after {
 /*====================*/
 #footer {
 	padding-top: 25px;
+    padding-bottom: 10px;
 	background-color: #ffffff;
 }
 

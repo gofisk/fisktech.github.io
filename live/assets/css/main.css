@@ -107,7 +107,7 @@ a:after {
 
 #navbar-title {
     font-size: 40px;
-    color: #2e89cc;
+    color: #c02ecc;
     padding-top: 15px;
     padding-bottom: 0px;
 }
@@ -225,34 +225,25 @@ a:after {
 /* CONTENT SPECIFIC */
 /*=================*/
 
-#section-code {
-    background-color: #cc2e3a;
-}
-
-#section-dev {
+#section-ehstech {
     background-color: #2e89cc;
 }
 
-#section-alert {
+#section-shrek {
     background-color: #2ecc71;
-    padding-bottom: 0px;
 }
-
-#section-alert a {
-    color: #000000;
-}
-
 
 /*====================*/
 /* MAIN FOOTER STYLES */
 /*====================*/
 #footer {
 	padding-top: 25px;
+    padding-bottom: 10px;
 	background-color: #ffffff;
 }
 
 #footer p {
-    color: #2e89cc;
+    color: #c02ecc;
 	text-align: center;
 	font-weight: 400;
 }
