@@ -1,7 +1,7 @@
 /*
  * Author: Scott Fisk
- * Last Updated: 02/26/16
- * Url: gofisk.com/code
+ * Last Updated: 02/27/16
+ * Url: gofisk.com/dev
  */
 
 /*==============*/
@@ -107,7 +107,7 @@ a:after {
 
 #navbar-title {
     font-size: 40px;
-    color: #2ecc71;
+    color: #2e89cc;
     padding-top: 15px;
     padding-bottom: 0px;
 }
@@ -225,10 +225,6 @@ a:after {
 /* CONTENT SPECIFIC */
 /*=================*/
 
-#section-about {
-    background-color: #2ecc71;
-}
-
 #section-code {
     background-color: #cc2e3a;
 }
@@ -256,7 +252,7 @@ a:after {
 }
 
 #footer p {
-    color: #2ecc71;
+    color: #2e89cc;
 	text-align: center;
 	font-weight: 400;
 }
