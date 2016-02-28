@@ -1,7 +1,7 @@
 /*
  * Author: Scott Fisk
  * Last Updated: 02/27/16
- * Url: gofisk.com/dev
+ * Url: gofisk.com/code
  */
 
 /*==============*/
@@ -19,6 +19,27 @@ body {
     -webkit-overflow-scrolling: touch;
     
     margin-top: 60px;
+}
+
+/*=============*/
+/*UNIVERSE FONT*/
+/*=============*/
+
+@font-face {
+    font-family: Univers;
+    src: url("../fonts/Univers.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: bold;
+    src: url("../fonts/Univers-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: lighter;
+    src: url("../fonts/Univers-Light.otf") format("opentype");
 }
 
 /*==============*/
@@ -45,6 +66,7 @@ h1, h2, h3, h4, h5, h6 {
 /*==========*/
 p {
     line-height: 28px;
+    margin-bottom: 25px;
 }
 
 .centered {
@@ -85,7 +107,9 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* Bootstrap Modifications */
+/*======================*/
+/*BOOTSTRAP MODIFICATION*/
+/*======================*/
  hr {
     display: block;
     height: 1px;
@@ -107,7 +131,7 @@ a:after {
 
 #navbar-title {
     font-size: 40px;
-    color: #2e89cc;
+    color: #2ecc71;
     padding-top: 15px;
     padding-bottom: 0px;
 }
@@ -221,9 +245,37 @@ a:after {
     width: 90%
 }
 
-/*=================*/
-/* CONTENT SPECIFIC */
-/*=================*/
+/*====================*/
+/* MAIN FOOTER STYLES */
+/*====================*/
+#footer {
+	padding-top: 25px;
+	background-color: #ffffff;
+}
+
+#footer p {
+    color: #2ecc71;
+	text-align: center;
+	font-weight: 400;
+}
+
+/*=====================*/
+/* PAGE SPECIFIC STYLES */
+/*=====================*/
+
+
+#navbar-title {
+    color: #2e89cc;
+}
+
+.btn-theme {
+    color: #ffffff;
+    background-color: black;
+}
+
+.content {
+    background-color: #cc2e3a;
+}
 
 #section-code {
     background-color: #cc2e3a;
@@ -242,18 +294,6 @@ a:after {
     color: #000000;
 }
 
-
-/*====================*/
-/* MAIN FOOTER STYLES */
-/*====================*/
-#footer {
-	padding-top: 25px;
-    padding-bottom: 10px;
-	background-color: #ffffff;
-}
-
 #footer p {
     color: #2e89cc;
-	text-align: center;
-	font-weight: 400;
 }

@@ -1,6 +1,6 @@
 /*
  * Author: Scott Fisk
- * Last Updated: 02/26/16
+ * Last Updated: 02/27/16
  * Url: gofisk.com/code
  */
 
@@ -19,6 +19,27 @@ body {
     -webkit-overflow-scrolling: touch;
     
     margin-top: 60px;
+}
+
+/*=============*/
+/*UNIVERSE FONT*/
+/*=============*/
+
+@font-face {
+    font-family: Univers;
+    src: url("../fonts/Univers.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: bold;
+    src: url("../fonts/Univers-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: lighter;
+    src: url("../fonts/Univers-Light.otf") format("opentype");
 }
 
 /*==============*/
@@ -86,7 +107,9 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* Bootstrap Modifications */
+/*======================*/
+/*BOOTSTRAP MODIFICATION*/
+/*======================*/
  hr {
     display: block;
     height: 1px;
@@ -114,7 +137,7 @@ a:after {
 }
 
 @media only screen and (max-width: 768px) {
-    #navbar-title {
+    #navbar-title-div {
         padding-left: 20px;
     }
 }
@@ -222,9 +245,37 @@ a:after {
     width: 90%
 }
 
-/*=================*/
-/* CONTENT SPECIFIC */
-/*=================*/
+/*====================*/
+/* MAIN FOOTER STYLES */
+/*====================*/
+#footer {
+	padding-top: 25px;
+	background-color: #ffffff;
+}
+
+#footer p {
+    color: #2ecc71;
+	text-align: center;
+	font-weight: 400;
+}
+
+/*=====================*/
+/* PAGE SPECIFIC STYLES */
+/*=====================*/
+
+
+#navbar-title {
+    color: #2ecc71;
+}
+
+.btn-theme {
+    color: #ffffff;
+    background-color: black;
+}
+
+.content {
+    background-color: #2ecc71;
+}
 
 #section-about {
     background-color: #2ecc71;
@@ -240,18 +291,4 @@ a:after {
 
 #section-live {
     background-color: #c02ecc;
-}
-
-/*====================*/
-/* MAIN FOOTER STYLES */
-/*====================*/
-#footer {
-	padding-top: 25px;
-	background-color: #ffffff;
-}
-
-#footer p {
-    color: #2ecc71;
-	text-align: center;
-	font-weight: 400;
 }

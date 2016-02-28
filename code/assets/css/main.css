@@ -1,6 +1,6 @@
 /*
  * Author: Scott Fisk
- * Last Updated: 02/26/16
+ * Last Updated: 02/27/16
  * Url: gofisk.com/code
  */
 
@@ -18,7 +18,28 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-overflow-scrolling: touch;
     
-    margin-top: 70px;
+    margin-top: 60px;
+}
+
+/*=============*/
+/*UNIVERSE FONT*/
+/*=============*/
+
+@font-face {
+    font-family: Univers;
+    src: url("../fonts/Univers.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: bold;
+    src: url("../fonts/Univers-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: lighter;
+    src: url("../fonts/Univers-Light.otf") format("opentype");
 }
 
 /*==============*/
@@ -86,7 +107,9 @@ a:after {
     transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
-/* Bootstrap Modifications */
+/*======================*/
+/*BOOTSTRAP MODIFICATION*/
+/*======================*/
  hr {
     display: block;
     height: 1px;
@@ -108,13 +131,13 @@ a:after {
 
 #navbar-title {
     font-size: 40px;
-    color: #cc2e3a;
+    color: #2ecc71;
     padding-top: 15px;
     padding-bottom: 0px;
 }
 
 @media only screen and (max-width: 768px) {
-    #navbar-title {
+    #navbar-title-div {
         padding-left: 20px;
     }
 }
@@ -126,7 +149,7 @@ a:after {
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
 	color: #ffffff;
     font-size: 200px;
-	background-color: #cc2e3a;
+	background-color: #2ecc71;
 }
 
 /*NAVBAR ICONS*/
@@ -147,10 +170,19 @@ a:after {
 /*CUSTOM THEME BUTTON*/
 .btn-theme {
     color: #ffffff;
-    background-color: #cc2e3a;
+    background-color: black;
     font-weight: 800;
     font-size: 25px;
     padding: 5px 15px;
+    border-color: transparent;
+}
+
+.topbar {
+    color: #ffffff;
+    background-color: #2eccc0;
+    font-weight: 800;
+    font-size: 25px;
+    padding-top: 20px;
     border-color: transparent;
 }
 
@@ -171,14 +203,28 @@ a:after {
 /* CONTENT SECTION */
 /*================*/
 
-#content {
-	background-color: #cc2e3a;
+.content {
+	background-color: #2ecc71;
 	padding-top: 40px;
     padding-bottom: 40px;
 	margin-bottom: 0px;
 }
 
-#content p {
+.content h1 {
+    color: white;
+    text-align: left;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.content h1 span {
+    color: white;
+    text-align: left;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+.content p {
     margin-top: 20px;
 	color: white;
     text-align: left;
@@ -186,42 +232,17 @@ a:after {
 	font-size: 20px;
 }
 
-#content p span {
+.content p span {
     font-weight: 800;
     font-size: 20px;
 }
 
-#content a {
+.content a {
     color: white;
 }
 
-#content img {
+.content img {
     width: 90%
-}
-
-#info h1 {
-    color: #cc2e3a;
-    background-color: #ffffff;
-    padding: 20px 20px;
-    margin-top: 0px;
-    border-radius: 4px;
-}
-
-/*COPPA LINK*/
-#legal {
-    text-align: center;
-    margin-top: 40px;
-}
-
-/*================*/
-/*ACCORDION STYLES*/
-/*================*/
-
-[data-toggle="collapse"] {
-    cursor: pointer;
-}
-[data-toggle="collapse"][aria-expanded="true"] .fa-chevron-right:before {
-    content: "\f078";
 }
 
 /*====================*/
@@ -233,7 +254,46 @@ a:after {
 }
 
 #footer p {
-    color: #cc2e3a;
+    color: #2ecc71;
 	text-align: center;
 	font-weight: 400;
+}
+
+/*=====================*/
+/* PAGE SPECIFIC STYLES */
+/*=====================*/
+
+
+#navbar-title {
+    color: #cc2e3a;
+}
+
+.btn-theme {
+    color: #ffffff;
+    background-color: #cc2e3a;
+}
+
+.content {
+    background-color: #cc2e3a;
+}
+
+/*COPPA LINK*/
+#legal {
+    text-align: center;
+    margin-top: 40px;
+}
+
+#footer p {
+    color: #cc2e3a;
+}
+
+/*================*/
+/*ACCORDION STYLES*/
+/*================*/
+
+[data-toggle="collapse"] {
+    cursor: pointer;
+}
+[data-toggle="collapse"][aria-expanded="true"] .fa-chevron-right:before {
+    content: "\f078";
 }
