@@ -277,6 +277,10 @@ a:after {
     background-color: #2ecc71;
 }
 
+.content img {
+    border: 4px solid white;
+}
+
 #section-about {
     background-color: #2ecc71;
 }
