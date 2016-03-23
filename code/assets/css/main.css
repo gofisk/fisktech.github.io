@@ -177,6 +177,15 @@ a:after {
     border-color: transparent;
 }
 
+.btn-white {
+    color: black;
+    background-color: white;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 5px 15px;
+    border-color: transparent;
+}
+
 .topbar {
     color: #ffffff;
     background-color: #2eccc0;
@@ -296,3 +305,96 @@ a:after {
 [data-toggle="collapse"][aria-expanded="true"] .fa-chevron-right:before {
     content: "\f078";
 }
+
+/*=====================*/
+/* FOOTER SLATE STYLES */
+/*=====================*/
+
+.footer-slate{
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+.footer-slate .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* CFW LOGO */
+
+.footer-slate h2{
+    color:  #FFFFFF;
+    margin: 0;
+}
+
+/* FOOTER RIGHT */
+
+.footer-slate .footer-right{
+    width: 100%;
+}
+
+.footer-slate .footer-right p{
+    display: inline-block;
+    color: #ffffff;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-slate .footer-right p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-slate .footer-right p a{
+    color:  #5383d3;
+    text-decoration: none;;
+}
+
+.footer-slate .footer-right i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+
+.footer-slate .footer-right i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+/* MAKE FOOTER RESPONSIVE */
+
+@media (max-width: 880px) {
+    
+    .footer-slate{
+        font: bold 14px sans-serif;
+    }
+    
+    .footer-slate .footer-left,
+    .footer-slate .footer-center,
+    .footer-slate .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+    
+    .footer-slate .footer-left{
+        padding-left: 0px;
+    }
+}
+
