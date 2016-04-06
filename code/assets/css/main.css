@@ -21,6 +21,11 @@ body {
     margin-top: 80px;
 }
 
+ul {
+    color: white;
+    font-size: 20px;
+}
+
 /*=============*/
 /*UNIVERSE FONT*/
 /*=============*/
@@ -76,6 +81,11 @@ p {
 .mt {
 	margin-top: 40px;
 }
+
+h4 {
+    text-align: left;
+}
+
 
 /*===========*/
 /*LINK STYLES*/
@@ -175,6 +185,28 @@ a:after {
     font-size: 25px;
     padding: 5px 15px;
     border-color: transparent;
+}
+
+.btn-start {
+    color: #ffffff;
+    background-color: #2ecc71;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 5px 15px;
+    border-color: transparent;
+}
+
+.btn-wip {
+    color: #ffffff;
+    background-color: #333;
+    font-weight: 800;
+    font-size: 25px;
+    padding: 5px 15px;
+    border-color: transparent;
+}
+
+.btn disabled {
+    cursor: none;
 }
 
 .btn-white {
@@ -294,6 +326,7 @@ a:after {
 #footer p {
     color: #cc2e3a;
 }
+
 
 /*================*/
 /*ACCORDION STYLES*/
