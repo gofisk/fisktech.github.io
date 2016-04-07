@@ -327,6 +327,10 @@ a:after {
     color: #cc2e3a;
 }
 
+#new_courses {
+    margin: 0px 2px 20px 2px;
+}
+
 
 /*================*/
 /*ACCORDION STYLES*/
