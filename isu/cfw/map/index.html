@@ -1,0 +1,167 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- Force latest rendering mode in IE -->
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Maps and Directions</title>
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+<link rel="stylesheet" type="text/css" href="css/map.css" />
+<link rel="stylesheet" type="text/css" href="css/leaflet.css" /> 
+<link rel="stylesheet" type="text/css" href="css/plugins.css" /> 
+<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
+<link rel="stylesheet" type="text/css" href="css/mobile.css"  media="only screen and (max-width: 581px)" >
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+<![endif]-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/leaflet.js"></script>
+<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+<script type="text/javascript" src="js/OSMBuildings-Leaflet.js"></script>
+<script type="text/javascript" src="js/popups.js"></script>
+<script type="text/javascript" src="js/dataMIN.js"></script>
+<script type="text/javascript" src="js/data2.js"></script>
+<script type="text/javascript" src="js/navigation.js"></script>
+<script type="text/javascript" src="js/leaflet.label.js"></script>
+<script type="text/javascript" src="js/L.Control.Locate.js"></script>
+<script type="text/javascript" src="js/help.js"></script>
+
+<script type="text/javascript">
+$(function() {
+$('nav#menu').mmenu({
+slidingSubmenus: false,
+position: "right",
+zposition: "front"
+});
+});
+</script>
+
+</head>
+
+<body>
+<script>jQuery('body').addClass('js');</script>
+<div id="header">
+
+<a href="http://www.familyweekend.iastate.edu/maps/cfw" class="logo"><img src="images/logo.png" width="300px" height="50px;" title="Iowa State University" alt="Iowa State University"/></a>
+<a href="#menu" class="menubutton button"></a>
+<!--<a href="#" class="helpbutton showhide button">Help</a>-->
+</div>
+
+<div id="content">
+    <nav id="menu">
+        <ul>
+            
+                    <li><a href="#" class="alumni">Alumni Center</a></li>
+                    <li><a href="#" class="carver">Carver Hall</a></li>
+                    <li><a href="#" class="convos">Conversations Dining</a></li>
+                    <li><a href="#" class="design">Design Building</a></li>
+                    <li><a href="#" class="hilton">Hilton Coliseum</a></li>
+                    <li><a href="#" class="lebaron">LeBaron Hall</a></li>
+                    <li><a href="#" class="mu">Memorial Union</a></li>
+                    <li><a href="#" class="scheman">Scheman Building</a></li>
+                
+            <li class="menu"><a href="https://www.google.com/maps/place/Iowa+State+University/@42.0266187,-93.6464654,17z/data=!3m1!4b1!4m2!3m1!1s0x87ee7a0a5e215b19:0xd7d8ed3aee6c49e8">Google Maps</a></li>
+            <li class="menu"><a href="#" id="refresh">Reset map</a></li>
+        </ul>
+        
+    </nav>
+
+<div id="map">
+
+</div>
+ </div>
+
+<div id="help"><a title="Close"><img src="images/close.png" width="30" height="30" alt="Close"></a>
+    <h1>How to use this map</h1>
+    <img src="images/menu.png" alt="Example menu button" class="example" >
+        <p>Click on the menu button to locate campus buildings being used during the weekend.</p>
+        <img src="images/geosymbol.png" alt="Example menu button" class="example" >
+            <p>Click on the target icon in the top left corner to show your current location on campus.</p>
+        <img src="images/info.png" height="50" width="50" alt="Example help button" class="example">
+            <p>Click on the info markers to learn more about a building being used this weekend.</p>
+</div>
+
+
+
+<!--SET UP BACKGROUND MAP FOR PAGE-->
+
+<script>
+var map = new L.Map('map', {maxBounds: [
+    //south west
+    [41.972516, -93.704311],
+    //north east
+    [42.079120, -93.547412]
+],attributionControl: false
+}).setView([42.023618, -93.645555], 14) ;
+(new L.TileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {minZoom: 12},
+{}
+)).addTo(map);
+
+
+//styles used to make the buildings layer invisible/visible (buildings layer required so buildings are clickable)
+var hidden = {"color": "#ffffff","weight": 5,"opacity":0,"fillOpacity":0,"fillColor":"#ffffff"};
+
+
+if ( $(window).width() > 0) {
+//add 3d buildings to the map from data.js
+(new OSMBuildings(map)).setData(data);
+
+}
+else {
+
+}
+
+
+var autopad = {autoPanPaddingBottomRight: [50,50],autoPanPaddingTopLeft: [50,120]}
+
+
+//add transparent markers
+var transIcon = L.Icon.extend({});
+var transmarker = new transIcon({iconUrl: 'images/markers/trans.png'});
+//var video = L.icon({iconUrl: 'images/markers/video.png', /*shadowUrl: '*.png',*/ iconSize:     [31, 43]});
+var info = L.icon({iconUrl: 'images/info.png', /*shadowUrl: '*.png',*/ iconSize:     [50, 50]});
+var parking = L.icon({iconUrl: 'images/parking.png', /*shadowUrl: '*.png',*/ iconSize:     [50, 50]});
+
+
+
+var transparent = L.icon({iconUrl: 'images/markers/transparent.png', /*shadowUrl: '*.png',*/ iconSize:     [80, 46]});
+var generic = L.icon({iconUrl: 'images/markers/generic.png', /*shadowUrl: '*.png',*/ iconSize:     [31, 43]});
+
+
+
+//ADD POLYGON LAYERS TO THE MAP (TO MAKE BUILDINGS CLICKABLE)
+(new L.geoJson(LOT_50B, {style: hidden})).bindLabel('Parking Lot 50B').addTo(map).bindPopup (CARVER_HALL_pop,(autopad));
+
+
+//MAIN MARKER TO SHOW LABEL FOR CENTRAL CAMPUS
+//L.marker([42.025352, -93.648575], {icon: transparent}).bindLabel('Carver Hall',{noHide:true}).addTo(map);
+L.marker([42.025230, -93.640230], {icon: info}).bindLabel('Conversations Dining').addTo(map).bindPopup(CONVOS_DINING_pop, (autopad));
+L.marker([42.023650, -93.645850], {icon: info}).bindLabel('Memorial Union').addTo(map).bindPopup(MEMORIAL_UNION_pop, (autopad));
+L.marker([42.025350, -93.648341], {icon: info}).bindLabel('Carver Hall').addTo(map).bindPopup(CARVER_HALL_pop, (autopad));
+L.marker([42.021006, -93.634823], {icon: info}).bindLabel('Hilton Coliseum').addTo(map).bindPopup(HILTON_pop, (autopad));
+L.marker([42.028800, -93.647524], {icon: info}).bindLabel('LeBaron Hall').addTo(map).bindPopup(LEBARON_HALL_pop, (autopad));
+L.marker([42.028700, -93.653180], {icon: info}).bindLabel('College of Design').addTo(map).bindPopup(DESIGN_BUILDING_pop, (autopad));
+L.marker([42.018151, -93.638691], {icon: info}).bindLabel('Alumni Center').addTo(map).bindPopup(ALUMNI_CENTER_pop, (autopad));
+L.marker([42.021580, -93.636750], {icon: info}).bindLabel('Scheman Building').addTo(map).bindPopup(SCHEMAN_BUILDING_pop, (autopad));
+
+
+//FOOTER CREDITS CONTENT AND LOCATION DEFINED
+L.control.attribution({prefix:'<a href="http://leafletjs.com/">LEAFLET</a> | <a href="http://www.openstreetmap.org/">OPENSTREETMAP</a>', position:'bottomright'}).addTo(map);
+
+
+// add geolocation on/off button
+L.control.locate().addTo(map);
+
+
+$('#refresh').click(function() {
+    location.reload();
+});
+
+
+</script>
+<script>jQuery('body').removeClass('js');</script>
+</body>
+</html>

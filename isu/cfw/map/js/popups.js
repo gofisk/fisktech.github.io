@@ -1,0 +1,15 @@
+var CARVER_HALL_pop = '<div class="poppy"><h3>Carver Hall</h3><br><h3><a href="http://www.familyweekend.iastate.edu/events/venues/carver-hall/">View Events</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=20">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=20">Find Parking</a></h3></div>';
+
+var CONVOS_DINING_pop = '<div class="poppy"><h3>Conversations Dining</h3><br><h3><a href="http://www.familyweekend.iastate.edu/event/brunch/">Brunch</a> will be served here on Sunday.<hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=34">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=34">Find Parking</a></h3></div>';
+
+var HILTON_pop = '<div class="poppy"><h3>Hilton Coliseum</h3><br><h3><a href="http://www.familyweekend.iastate.edu/events/venues/hilton-coliseum/">View Events</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=53">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=53">Find Parking</a></h3></div>';
+
+var MEMORIAL_UNION_pop = '<div class="poppy"><h3>Memorial Union</h3><br><h3><a href="http://www.familyweekend.iastate.edu/events/venues/memorial-union/">View Events</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=88">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=88">Find Parking</a></h3></div>';
+
+var SCHEMAN_BUILDING_pop = '<div class="poppy"><h3>Scheman Building</h3><br><h3><a href="http://www.familyweekend.iastate.edu/events/venues/memorial-union/">View Events</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=113">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=113">Find Parking</a></h3></div>';
+
+var LEBARON_HALL_pop = '<div class="poppy"><h3>LeBaron Hall</h3><br><h3><a href="http://www.familyweekend.iastate.edu/events/venues/lebaron-hall/">View Events</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=76">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=76">Find Parking</a></h3></div>';
+
+var DESIGN_BUILDING_pop = '<div class="poppy"><h3>College of Design</h3><br><h3><a href="http://www.familyweekend.iastate.edu/events/venues/college-of-design-building/">View Events</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=31">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=31">Find Parking</a></h3></div>';
+
+var ALUMNI_CENTER_pop = '<div class="poppy"><h3>Alumni Center</h3><br><h3><a href="http://www.familyweekend.iastate.edu/events/venues/alumni-center/">View Events</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building.asp?id=191">Building Info</a><hr><a href="https://www.fpm.iastate.edu/maps/buildings/building_parking.asp?id=191">Find Parking</a></h3></div>';
