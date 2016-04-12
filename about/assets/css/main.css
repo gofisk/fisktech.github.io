@@ -237,7 +237,8 @@ a:after {
 }
 
 .content a {
-    color: white;
+    color: #fff;
+    text-decoration: underline;
 }
 
 .content img {
