@@ -1,0 +1,383 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <!-- Force latest rendering mode in IE -->
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+            <title>IOWA STATE UNIVERSITY</title>
+            <meta name="description" content="" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            
+            <link rel="stylesheet" type="text/css" href="css/map.css" />
+            <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+            <link rel="stylesheet" type="text/css" href="css/plugins.css" />
+            <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
+            <link rel="stylesheet" type="text/css" href="css/mobile.css"  media="only screen and (max-width: 581px)" >
+                <!--[if lte IE 8]>
+                 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+                 <![endif]-->
+                <script type="text/javascript" src="js/jquery.min.js"></script>
+                <script type="text/javascript" src="js/leaflet.js"></script>
+                <script type="text/javascript" src="js/jquery.mmenu.js"></script>
+                <script type="text/javascript" src="js/OSMBuildings-Leaflet.js"></script>
+                <script type="text/javascript" src="js/popups.js"></script>
+                <script type="text/javascript" src="js/polygons.js"></script>
+                <script type="text/javascript" src="js/clickable.js"></script>
+                <script type="text/javascript" src="js/navigation.js"></script>
+                <script type="text/javascript" src="js/leaflet.label.js"></script>
+                <script type="text/javascript" src="js/L.Control.Locate.js"></script>
+                <script type="text/javascript" src="js/help.js"></script>
+                
+                <!-- Google tracking code-->
+
+                
+                <script type="text/javascript">
+                    $(function() {
+                      $('nav#menu').mmenu({
+                                          slidingSubmenus: false,
+                                          position: "right",
+                                          zposition: "front"
+                                          });
+                      });
+                    </script>
+    </head>
+    
+    <body>
+        <script>jQuery('body').addClass('js');</script>
+        <div id="header">
+            
+            <a href="http://www.le.ac.uk" class="logo"><img src="images/logo.png" title="University of Leicester" alt="University of Leicester"/></a>
+            <a href="#menu" class="menubutton button">Menu</a>
+            <a href="#" class="helpbutton showhide button">Help</a>
+        </div>
+        
+        <div id="content">
+            <nav id="menu">
+                <ul>
+                    <li><a href="#mm-m0-p1" class="mm-subopen fix">Academic Buildings</a>
+                        <ul id="mm-m0-p1">
+                            
+                            <li><a href="#" class="maincampus2">Advanced Machinery Systems Laboratory</a></li>
+                            <li><a href="#" class="maincampus3">Agronomy Greenhouse</a></li>
+                            <li><a href="#" class="maincampus4">Agronomy Hall</a></li>
+                            <li><a href="#" class="maincampus5">Alumni Center</a></li>
+                            <li><a href="#" class="maincampus6">Ames Intermodal Facility</a></li>
+                            <li><a href="#" class="maincampus7">Ames Lab Construction Storage</a></li>
+                            <li><a href="#" class="maincampus8">Ames Lab Maintenance Shops</a></li>
+                            <li><a href="#" class="maincampus9">Ames Lab Mechanical Maintenance</a></li>
+                            <li><a href="#" class="maincampus10">Ames Lab Paint and Air Conditioning</a></li>
+                            <li><a href="#" class="maincampus11">Ames Lab Warehouse</a></li>
+                            <li><a href="#" class="maincampus12">Applied Science 1</a></li>
+                            <li><a href="#" class="maincampus13">Applied Science 2</a></li>
+                            <li><a href="#" class="maincampus14">Applied Science 3</a></li>
+                            
+                            <li><a href="#" class="maincampus16">Atanasoff Hall</a></li>
+                            
+                            
+                            
+                            <li><a href="#" class="maincampus21">Bessey Hall</a></li>
+                            
+                            <li><a href="#" class="maincampus23">Biomass Reprocessing Center</a></li>
+                            <li><a href="#" class="maincampus24">Biorenewables Research Laboratory</a></li>
+                            
+                            <li><a href="#" class="maincampus26">Black Engineering</a></li>
+                            
+                            <li><a href="#" class="maincampus28">Campanile</a></li>
+                            <li><a href="#" class="maincampus29">Carver Hall</a></li>
+                            <li><a href="#" class="maincampus30">Catt Hall</a></li>
+                            <li><a href="#" class="maincampus31">College of Design</a></li>
+                            
+                            <li><a href="#" class="maincampus33">Coover Hall</a></li>
+                            <li><a href="#" class="maincampus34">Crop Genome Information Laboratory</a></li>
+                            <li><a href="#" class="maincampus35">Curtiss Hall</a></li>
+                            <li><a href="#" class="maincampus36">Davidson Hall</a></li>
+                            <li><a href="#" class="maincampus37">Durham Center</a></li>
+                            <li><a href="#" class="maincampus38">East Hall</a></li>
+                            <li><a href="#" class="maincampus39">East Parking Deck</a></li>
+                            
+                            <li><a href="#" class="maincampus41">Elings Hall</a></li>
+                            <li><a href="#" class="maincampus42">Enrollment Services Center</a></li>
+                            
+                            <li><a href="#" class="maincampus44">Extension 4-H Building</a></li>
+                            <li><a href="#" class="maincampus45">Extension Information Technology</a></li>
+                            <li><a href="#" class="maincampus46">Family Resource Center</a></li>
+                            <li><a href="#" class="maincampus47">Farm House</a></li>
+                            <li><a href="#" class="maincampus48">Fick Observatory</a></li>
+                            <li><a href="#" class="maincampus49">Firemanship Training</a></li>
+                            <li><a href="#" class="maincampus50">Fisher Theater</a></li>
+                            <li><a href="#" class="maincampus51">Food Sciences Building</a></li>
+                            <li><a href="#" class="maincampus52">Forestry Greenhouse</a></li>
+                            <li><a href="#" class="maincampus53">Forker Building</a></li>
+                            <li><a href="#" class="maincampus54">Frederiksen Court 11</a></li>
+                            <li><a href="#" class="maincampus55">Frederiksen Court 12</a></li>
+                            <li><a href="#" class="maincampus56">Frederiksen Court 13</a></li>
+                            <li><a href="#" class="maincampus57">Frederiksen Court 21</a></li>
+                            <li><a href="#" class="maincampus58">Frederiksen Court 22</a></li>
+                            <li><a href="#" class="maincampus59">Frederiksen Court 23</a></li>
+                            <li><a href="#" class="maincampus60">Frederiksen Court 24</a></li>
+                            <li><a href="#" class="maincampus61">Frederiksen Court 31</a></li>
+                            <li><a href="#" class="maincampus62">Frederiksen Court 32</a></li>
+                            <li><a href="#" class="maincampus63">Frederiksen Court 33</a></li>
+                            <li><a href="#" class="maincampus64">Frederiksen Court 34</a></li>
+                            <li><a href="#" class="maincampus65">Frederiksen Court 35</a></li>
+                            <li><a href="#" class="maincampus66">Frederiksen Court 36</a></li>
+                            <li><a href="#" class="maincampus67">Frederiksen Court 41</a></li>
+                            <li><a href="#" class="maincampus68">Frederiksen Court 42</a></li>
+                            <li><a href="#" class="maincampus69">Frederiksen Court 43</a></li>
+                            <li><a href="#" class="maincampus70">Frederiksen Court 51</a></li>
+                            <li><a href="#" class="maincampus71">Frederiksen Court 52</a></li>
+                            <li><a href="#" class="maincampus72">Frederiksen Court 53</a></li>
+                            <li><a href="#" class="maincampus73">Frederiksen Court 61</a></li>
+                            <li><a href="#" class="maincampus74">Frederiksen Court 62</a></li>
+                            <li><a href="#" class="maincampus75">Frederiksen Court 63</a></li>
+                            <li><a href="#" class="maincampus76">Frederiksen Court 71</a></li>
+                            <li><a href="#" class="maincampus77">Frederiksen Court 72</a></li>
+                            <li><a href="#" class="maincampus78">Frederiksen Court 73</a></li>
+                            <li><a href="#" class="maincampus79">Frederiksen Court 74</a></li>
+                            <li><a href="#" class="maincampus80">Frederiksen Court 81</a></li>
+                            <li><a href="#" class="maincampus81">Frederiksen Court 82</a></li>
+                            <li><a href="#" class="maincampus82">Frederiksen Court 83</a></li>
+                            <li><a href="#" class="maincampus83">Frederiksen Court Community Center</a></li>
+                            
+                            <li><a href="#" class="maincampus86">General Services Building</a></li>
+                            <li><a href="#" class="maincampus87">Genetics Chick Isolation</a></li>
+                            <li><a href="#" class="maincampus88">Genetics Laboratory</a></li>
+                            <li><a href="#" class="maincampus89">Gerdin Business Building</a></li>
+                            <li><a href="#" class="maincampus90">Gilman Hall</a></li>
+                            <li><a href="#" class="maincampus91">Hach Hall</a></li>
+                            <li><a href="#" class="maincampus92">Hamilton Hall</a></li>
+                            <li><a href="#" class="maincampus93">Hansen Agricultural Student Learning Center</a></li>
+                            <li><a href="#" class="maincampus94">Heady Hall</a></li>
+                            
+                            
+                            <li><a href="#" class="maincampus97">Hixson-Lied Student Success Center</a></li>
+                            <li><a href="#" class="maincampus98">Hoover Hall</a></li>
+                            <li><a href="#" class="maincampus99">Horse Barn</a></li>
+                            <li><a href="#" class="maincampus100">Horticulture Hall</a></li>
+                            <li><a href="#" class="maincampus101">Howe Hall</a></li>
+                            
+                            <li><a href="#" class="maincampus103">Human Nutritional Sciences Building</a></li>
+                            <li><a href="#" class="maincampus104">Ice Arena</a></li>
+                            <li><a href="#" class="maincampus105">Industrial Education II</a></li>
+                            <li><a href="#" class="maincampus106">Insectary</a></li>
+                            <li><a href="#" class="maincampus107">Iowa Farm Bureau Pavilion</a></li>
+                            
+                            <li><a href="#" class="maincampus110">Jischke Honors Building</a></li>
+                            <li><a href="#" class="maincampus111">Kildee Hall</a></li>
+                            <li><a href="#" class="maincampus112">King Pavillion</a></li>
+                            
+                            <li><a href="#" class="maincampus114">Knoll</a></li>
+                            <li><a href="#" class="maincampus115">Laboratory of Mechanics</a></li>
+                            <li><a href="#" class="maincampus116">Lagomarcino Hall</a></li>
+                            <li><a href="#" class="maincampus117">Landscape Architecture</a></li>
+                            
+                            <li><a href="#" class="maincampus119">LeBaron Hall</a></li>
+                            <li><a href="#" class="maincampus120">Library Storage Facility</a></li>
+                            
+                            
+                            <li><a href="#" class="maincampus123">Livestock Infectious Disease Isolation Facility</a></li>
+                            <li><a href="#" class="maincampus124">Lloyd Veterinary Medical Center</a></li>
+                            
+                            <li><a href="#" class="maincampus126">MacKay Hall</a></li>
+                            
+                            <li><a href="#" class="maincampus129">Marston Hall</a></li>
+                            
+                            <li><a href="#" class="maincampus131">Meats Laboratory</a></li>
+                            <li><a href="#" class="maincampus132">Memorial Union</a></li>
+                            <li><a href="#" class="maincampus133">Metals Development Building</a></li>
+                            <li><a href="#" class="maincampus134">Molecular Biology Building</a></li>
+                            <li><a href="#" class="maincampus135">Morrill Hall</a></li>
+                            <li><a href="#" class="maincampus136">Music Hall</a></li>
+                            <li><a href="#" class="maincampus137">National Laboratory for Agroculture and the Environment</a></li>
+                            <li><a href="#" class="maincampus138">National Swine Research and Information Center</a></li>
+                            <li><a href="#" class="maincampus139">North Chilled Water Plant</a></li>
+                            <li><a href="#" class="maincampus140">Nuclear Engineering Laboratory</a></li>
+                            
+                            <li><a href="#" class="maincampus142">Office and Laboratory Building</a></li>
+                            <li><a href="#" class="maincampus143">Olsen Building</a></li>
+                            <li><a href="#" class="maincampus144">Palmer Building</a></li>
+                            <li><a href="#" class="maincampus145">Parks Library</a></li>
+                            <li><a href="#" class="maincampus146">Pearson Hall</a></li>
+                            <li><a href="#" class="maincampus147">Physics Hall</a></li>
+                            <li><a href="#" class="maincampus148">Plant Pathology Greenhouse</a></li>
+                            <li><a href="#" class="maincampus149">Power Plant</a></li>
+                            <li><a href="#" class="maincampus150">Printing and Publications Building</a></li>
+                            <li><a href="#" class="maincampus151">Reactor Warehouse</a></li>
+                            <li><a href="#" class="maincampus152">Reiman Gardens Conservatory</a></li>
+                            <li><a href="#" class="maincampus153">Reiman Gardens Hunziker House</a></li>
+                            <li><a href="#" class="maincampus154">Reiman Gardens Mahlstede Center</a></li>
+                            <li><a href="#" class="maincampus155">Reiman Maintenance Building</a></li>
+                            <li><a href="#" class="maincampus156">Research Park 1</a></li>
+                            <li><a href="#" class="maincampus157">Research Park 2</a></li>
+                            <li><a href="#" class="maincampus158">Research Park 3</a></li>
+                            <li><a href="#" class="maincampus159">Research Park 4</a></li>
+                            <li><a href="#" class="maincampus160">Research Park 5</a></li>
+                            <li><a href="#" class="maincampus161">Research Park 6</a></li>
+                            <li><a href="#" class="maincampus162">Research Park 7</a></li>
+                            
+                            <li><a href="#" class="maincampus164">Ross Hall</a></li>
+                            <li><a href="#" class="maincampus165">Roy J. Carver Co-Lab</a></li>
+                            <li><a href="#" class="maincampus166">Ruminant Nutrition Laboratory</a></li>
+                            <li><a href="#" class="maincampus167">Scheman Building</a></li>
+                            <li><a href="#" class="maincampus168">Schilletter-University Village Community Center</a></li>
+                            <li><a href="#" class="maincampus169">Science Hall</a></li>
+                            <li><a href="#" class="maincampus170">Science Hall II</a></li>
+                            <li><a href="#" class="maincampus171">Seed Science Building</a></li>
+                            <li><a href="#" class="maincampus172">Sloss House</a></li>
+                            <li><a href="#" class="maincampus173">Snedecor Hall</a></li>
+                            <li><a href="#" class="maincampus174">South Campus Storage Facility</a></li>
+                            <li><a href="#" class="maincampus175">Spangler Geotechnical Laboratory</a></li>
+                            <li><a href="#" class="maincampus176">Spedding Hall</a></li>
+                            
+                            <li><a href="#" class="maincampus178">State Office Building</a></li>
+                            <li><a href="#" class="maincampus179">State Warehouse Building</a></li>
+                            <li><a href="#" class="maincampus180">Stephens Auditorium</a></li>
+                            <li><a href="#" class="maincampus181">Student Services</a></li>
+                            
+                            <li><a href="#" class="maincampus183">Sukup Hall</a></li>
+                            <li><a href="#" class="maincampus184">Sweeney Hall</a></li>
+                            <li><a href="#" class="maincampus185">Technical and Administrative Services Facility</a></li>
+                            <li><a href="#" class="maincampus186">Thielen Student Health Center</a></li>
+                            <li><a href="#" class="maincampus187">Town Engineering Building</a></li>
+                            <li><a href="#" class="maincampus188">Transit Hub</a></li>
+                            <li><a href="#" class="maincampus189">Transportation Services</a></li>
+                            <li><a href="#" class="maincampus190">Troxel Hall</a></li>
+                            <li><a href="#" class="maincampus191">Union Drive Community Center</a></li>
+                            <li><a href="#" class="maincampus192">University Child Care Center at Veterinary Medicine</a></li>
+                            <li><a href="#" class="maincampus193">University Surplus and Storage Facility</a></li>
+                            <li><a href="#" class="maincampus194">USDA Greenhouse</a></li>
+                            
+                            <li><a href="#" class="maincampus198">Vet Med Field Services</a></li>
+                            <li><a href="#" class="maincampus199">Vet Med Performance Evaluation Facility</a></li>
+                            <li><a href="#" class="maincampus200">Vet Med Power Plant</a></li>
+                            <li><a href="#" class="maincampus201">Veterinary Medicine</a></li>
+                            <li><a href="#" class="maincampus202">Visitor Information Booth</a></li>
+                            <li><a href="#" class="maincampus203">VMRI 01</a></li>
+                            <li><a href="#" class="maincampus204">VMRI 02</a></li>
+                            <li><a href="#" class="maincampus205">VMRI 03</a></li>
+                            <li><a href="#" class="maincampus206">VMRI 04</a></li>
+                            <li><a href="#" class="maincampus207">VMRI 05</a></li>
+                            <li><a href="#" class="maincampus208">VMRI 06</a></li>
+                            <li><a href="#" class="maincampus209">VMRI 07</a></li>
+                            <li><a href="#" class="maincampus210">VMRI 08</a></li>
+                            <li><a href="#" class="maincampus211">VMRI 12</a></li>
+                            <li><a href="#" class="maincampus212">VMRI 16</a></li>
+                            <li><a href="#" class="maincampus213">VMRI 29</a></li>
+                            <li><a href="#" class="maincampus214">VMRI 35</a></li>
+                            <li><a href="#" class="maincampus215">VMRI 37</a></li>
+                            <li><a href="#" class="maincampus216">VMRI 40</a></li>
+                            <li><a href="#" class="maincampus217">VMRI 46</a></li>
+                            
+                            <li><a href="#" class="maincampus220">Waste Chemical Handling</a></li>
+                            
+                            <li><a href="#" class="maincampus222">Wilhelm Hall</a></li>
+                            
+                            <li><a href="#" class="maincampus225">Zaffarano Physics Addition</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p2" class="mm-subopen fix">Administrative Buildings</a>
+                        <ul id="mm-m0-p2">
+                            <li><a href="#" class="ASB">Administrative Services Building</a></li>
+                            <li><a href="#" class="maincampus15">Armory (ISU Police)</a></li>
+                            <li><a href="#" class="maincampus18">Beardshear Hall</a></li>
+                            <li><a href="#" class="maincampus32">Communications Building</a></li>
+                            <li><a href="#" class="maincampus43">Environmental Health and Safety</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p3" class="mm-subopen fix">Athletics Facilities</a>
+                        <ul id="mm-m0-p3">
+                            <li><a href="#" class="maincampus19">Bergstrom Football Complex</a></li>
+                            <li><a href="#" class="maincampus20">Bergstrom Indoor Training Facility</a></li>
+                            <li><a href="#" class="maincampus22">Beyer Hall</a></li>
+                            <li><a href="#" class="maincampus96">Hilton Coliseum</a></li>
+                            <li><a href="#" class="maincampus108">Jack Trice Stadium</a></li>
+                            <li><a href="#" class="maincampus109">Jacobson Athletic Building</a></li>
+                            <li><a href="#" class="maincampus121">Lied Recreation Athletic Facility</a></li>
+                            <li><a href="#" class="maincampus177">State Gymnasium</a></li>
+                            <li><a href="#" class="maincampus182">Sukup Basketball Complex</a></li>
+                            <li><a href="#" class="maincampus195">Veenker Clubhouse</a></li>
+                            <li><a href="#" class="maincampus196">Veenker Maintenance Shed</a></li>
+                            <li><a href="#" class="maincampus197">Veenker Performance Center</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p4" class="mm-subopen fix">Campus Dining</a>
+                        <ul id="mm-m0-p4">
+                            <li><a href="#" class="maincampus102">Hub</a></li>
+                            <li><a href="#" class="maincampus113">Knapp-Storms Dining Complex</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p5" class="mm-subopen fix">General Facilities</a>
+                        <ul id="mm-m0-p5">
+                            <li><a href="#" class="maincampus1">Administrative Services Building</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p6" class="mm-subopen fix">Outdoor Features</a>
+                        <ul id="mm-m0-p6">
+                            <li><a href="#" class="maincampus1">Administrative Services Building</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p7" class="mm-subopen fix">Residence Halls</a>
+                        <ul id="mm-m0-p7">
+                            <li><a href="#" class="maincampus17">Barton Residence Hall</a></li>
+                            <li><a href="#" class="maincampus25">Birch Residence Hall</a></li>
+                            <li><a href="#" class="maincampus27">Buchanan Residence Hall</a></li>
+                            <li><a href="#" class="maincampus40">Eaton Residence Hall</a></li>
+                            <li><a href="#" class="maincampus84">Freeman Residence Hall</a></li>
+                            <li><a href="#" class="maincampus85">Friley Residence Hall</a></li>
+                            <li><a href="#" class="maincampus95">Helser Residence Hall</a></li>
+                            <li><a href="#" class="maincampus118">Larch Residence Hall</a></li>
+                            <li><a href="#" class="maincampus122">Linden Residence Hall</a></li>
+                            <li><a href="#" class="maincampus125">Lyon Residence Hall</a></li>
+                            <li><a href="#" class="maincampus127">Maple Residence Hall</a></li>
+                            <li><a href="#" class="maincampus128">Maple-Willow-Larch Commons</a></li>
+                            <li><a href="#" class="maincampus130">Martin Residence Hall</a></li>
+                            <li><a href="#" class="maincampus141">Oak-Elm Residence Hall</a></li>
+                            <li><a href="#" class="maincampus218">Wallace Residence Hall</a></li>
+                            <li><a href="#" class="maincampus219">Wallace-Wilson Commons</a></li>
+                            <li><a href="#" class="maincampus221">Welch Residence Hall</a></li>
+                            <li><a href="#" class="maincampus223">Willow Residence Hall</a></li>
+                            <li><a href="#" class="maincampus224">Wilson Residence Hall</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p8" class="mm-subopen fix">Parking Lots</a>
+                        <ul id="mm-m0-p8">
+                            <li><a href="#" class="maincampus1">Administrative Services Building</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </nav>
+            <div id="map">
+                
+            </div>
+        </div>
+        
+        <div id="help"><a title="Close"><img src="images/close.png" width="30" height="30" alt="Close"></a>
+            <h1>How to use this map</h1>
+            <img src="images/menu.png" alt="Example menu button" class="example" >
+            <p>Click on the menu button in the top right corner to locate buildings and departments</p>
+            <img src="images/help.png" alt="Example help button" class="example">
+            <p>Click on the help button in the top right corner to display this help menu</p>
+            <img src="images/generic.png" alt="Example help button" class="example">
+            <p>Click on the markers to view videos and 360° virtual tours</p>
+            <h2>Directions to the University</h2>
+            <ul>
+                <li><a href="#" class="directions1 showhide">North</a></li>
+                <li><a href="#" class="directions2 showhide">East</a></li>
+                <li><a href="#" class="directions3 showhide">South</a></li>
+                <li><a href="#" class="directions4 showhide">West</a></li>
+            </ul>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script>jQuery('body').removeClass('js');</script>
+    </body>
+</html>
