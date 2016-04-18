@@ -7,7 +7,7 @@ var map = new L.Map('map', {maxBounds: [
 }).setView([42.026611, -93.646444], 17) ;
   
 //GET MAP TILES FOR BACKGROUND
-(new L.TileLayer('http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png', {minZoom: 15},
+(new L.TileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {minZoom: 15},
 //(new L.TileLayer('http://otile4.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', {minZoom: 15},
     {}
 )).addTo(map);
