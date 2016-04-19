@@ -41,7 +41,7 @@ var autopad = {autoPanPaddingBottomRight: [50,50],autoPanPaddingTopLeft: [50,120
 
 //ADD VIRTUAL TOUR MARKERS
     L.marker([42.026500, -93.649181], {icon: generic}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="https://gofisk.com/isu/cfw/map/360/WEST_LAWN.html"></iframe>',(autopad));
-    L.marker([42.026811, -93.648443], {icon: generic}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.2/pannellum.htm?panorama=https://gofisk.com/isu/cfw/map/images/360/HUB.jpg&amp;haov=360&amp;vaov=50&amp;vOffset=0&amp;title=THE%20HUB&amp;yaw=181"></iframe>',(autopad));
+    L.marker([42.026811, -93.648443], {icon: generic}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="https://gofisk.com/isu/cfw/map/360/HUB.html"></iframe>',(autopad));
         
 //ADD VIDEO MARKERS
     L.marker([52.6204,-1.1236], {icon: video}).bindLabel('Watch Video').addTo(map).bindPopup('<iframe src=\"https://www.youtube.com/embed/D-bOttxNEvQ\" frameborder=\"0\" allowfullscreen width=\"700px\" height=\"400px\"></iframe>',(autopad));
