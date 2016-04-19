@@ -40,7 +40,7 @@ var autopad = {autoPanPaddingBottomRight: [50,50],autoPanPaddingTopLeft: [50,120
     L.marker([52.6206,-1.1288], {icon: transparent}).bindLabel('University Entrance',{noHide:true}).addTo(map);	
 
 //ADD VIRTUAL TOUR MARKERS
-    L.marker([52.6219,-1.1245], {icon: generic}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe src=\"360/campusexterior/set1" width=\"700px\" height=\"400px\"></iframe>',(autopad));
+    L.marker([42.026500, -93.649181], {icon: generic}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="https://cdn.pannellum.org/2.2/pannellum.htm?panorama=https://gofisk.com/isu/cfw/map/images/360/WEST_LAWN.jpg&amp;haov=360&amp;vaov=50&amp;vOffset=0&amp;title=ISU%20WEST%20LAWN&amp;yaw=177"></iframe>',(autopad));
         
 //ADD VIDEO MARKERS
     L.marker([52.6204,-1.1236], {icon: video}).bindLabel('Watch Video').addTo(map).bindPopup('<iframe src=\"https://www.youtube.com/embed/D-bOttxNEvQ\" frameborder=\"0\" allowfullscreen width=\"700px\" height=\"400px\"></iframe>',(autopad));
