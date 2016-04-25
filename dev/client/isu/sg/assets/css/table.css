@@ -1,0 +1,50 @@
+table.sgTable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+table.sgTable thead tr th {
+    padding: 12px 0;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+table.sgTable tbody tr td {
+    text-align: center;
+    padding: 8px;
+}
+
+@media (max-width: 560px) {
+    /* Change away from table layout */
+    table, thead, tbody, th, tr, td {
+        display: block;
+        width: 100%;
+    }
+    
+    table.sgTable thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    table.sgTable tbody tr {
+        border-collapse: collapse;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    table.sgTable tbody tr td {
+        border: none;
+        padding: 0px;
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+    /*UPDATE TITLE*/
+    table.sgTable tbody tr td:nth-child(1) {
+        font-size: 22px;
+        font-weight: 300;
+    }
+    
+    /*UPDATE FRIENDLY DATE*/
+    table.sgTable tbody tr td:nth-child(2) {
+        margin-bottom: 5px;
+    }
+}

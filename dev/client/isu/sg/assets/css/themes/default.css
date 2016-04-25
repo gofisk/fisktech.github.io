@@ -1,0 +1,205 @@
+/*
+ * Author: Scott Fisk
+ * Website: https://gofisk.com
+ * ISU STUDENT GOVERNMENT
+ * DEFAULT COLOR SCHEME
+ */
+
+
+/*=============*/
+/*GLOBAL STYLES*/
+/*=============*/
+
+body {
+    background-color: #f2f2f2;
+    color: #555;
+}
+
+/*==========*/
+/*TYPOGRAPHY*/
+/*==========*/
+
+h1, h2, h3, h4, h5, h6, blockquote {
+    color: #333 !important;
+}
+
+.redText {
+    color: #cc0000 !important;
+}
+
+.whiteText {
+    color: #000000 !important;
+}
+
+.ribbon {
+    background-color: #006BA6;
+    color: #FFFFFF !important;
+}
+
+.ribbon {
+    background-color: #006BA6;
+    color: #FFFFFF !important;
+}
+
+.redRibbon {
+    background-color: #cc0000 !important;
+}
+
+#meeting {
+    background-color: #cc0000;
+}
+
+.highlightedText {
+    background: yellow;
+}
+
+/*===========*/
+/*LINK STYLES*/
+/*===========*/
+
+a {
+    color: #f85c37;
+}
+
+a:hover,
+a:focus {
+    color: #cc0000;
+}
+
+/*==============*/
+/*BOOTSTRAP MODS*/
+/*==============*/
+
+hr {
+    background-color: #333;
+}
+
+.navbar {
+	background-color: #ffffff;
+    border-bottom: 2px solid #cc0000;
+}
+
+#navbar-title {
+    color: #cc0000;    
+}
+
+#navbar-title span {
+    color: #333;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #ffffff;
+	background-color: #cc0000;
+}
+
+.btn {
+	border: 5px solid transparent;
+}
+
+.btn-theme {
+    color: #ffffff!important;
+    background-color: #cc0000!important;
+}
+
+.btn-gold {
+    color: #cc0000;
+    background-color: #F1BE48;
+}
+
+.btn-facebook {
+    color: #ffffff!important;
+    background-color: #3b5998!important;
+}
+
+.btn-twitter {
+    color: #ffffff!important;
+    background-color: #00aced!important;
+}
+
+/*==================*/
+/* SECTION SPECIFIC */
+/*==================*/
+
+#section-white {
+    background-color: #fff;
+}
+
+#section-slate{
+    background-color: #292c2f;
+}
+
+/*===============*/
+/* WIDGET STYLES */
+/*===============*/
+
+.widget {
+    box-shadow: 0px 0px 10px #ccc;
+    background-color: white;
+}
+
+/*================*/
+/* PROJECT STATUS */
+/*================*/
+
+/*YELLOW*/
+.on_hold {
+    background-color: #F1BE48;
+    color: #FFF;
+}
+
+/*GREEN*/
+.in_progress {
+    background-color: #2ecc71;
+    color: #FFF;
+}
+
+/*RED*/
+.abandoned {
+    background-color: #CC0000;
+    color: #FFF;
+}
+
+/*GRAY*/
+.completed {
+    background-color: #333333;
+    color: #FFF;
+}
+
+/*BLUE*/
+.planning {
+    background-color: #2e89cc;
+    color: #FFF;
+}
+
+/*ORANGE*/
+.ongoing {
+    background-color: #cc712e;
+    color: #FFF;
+}
+
+/*===================*/
+/* SOCIAL ICON LINKS */
+/*===================*/
+
+#social i {
+    color: #cc0000;
+}
+
+#social .col-md-4:hover {
+    background-color: #f5f5f5;
+}
+
+/*===================*/
+/* SUB FOOTER STYLES */
+/*===================*/
+#footer {
+	background-color: #cc0000;
+}
+
+#footer p {
+	color: white;
+}
+
+#footer a {
+    color: #F1BE48
+}
