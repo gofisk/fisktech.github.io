@@ -72,10 +72,11 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="alert alert-success">
-                                Showing <strong>{{filtered.length}}/{{fs_dir.sgResources.directory.length}}</strong> resources <span id="urlParamTitle"></span>
-                                <a id="resetText" style=cursor:pointer; ng-click="search = undefined" onclick="focusSearch();">
-                                <span>[Reset]</span></a>
-                            </div><!--./alert-->
+                                Showing 
+                                <strong ng-bind="filtered.length"></strong><strong>/</strong><strong ng-bind="fs_dir.sgResources.directory.length"></strong> 
+                                resources <span id="urlParamTitle"></span>
+                                <a id="resetText" style=cursor:pointer; ng-click="search = undefined" onclick="focusSearch();"><span>[Reset]</span></a>
+                            </div>
                         </div><!--./col-md-12-->
                     </div><!--./row-->
                     <!--START ANGULAR TABLE-->
@@ -85,7 +86,6 @@
                                 <table class="sgTable">
                                     <thead>
                                         <tr ng-hide="(fs_dir.sgResources.directory | filter:search).length == 0">
-                                            <th></th>
                                             <th>
                                                 <a style=cursor:pointer; ng-click="sortType = 'TITLE'; sortReverse = !sortReverse">
                                                     Title
@@ -99,10 +99,9 @@
                                     </thead>
                                     <tbody>
                                         <tr ng-repeat="resource in fs_dir.sgResources.directory | orderBy:sortType:sortReverse| filter:search | filter:query as filtered">
-                                            <td><strong>{{resource.TITLE | limitTo:2 | uppercase}}</strong></td>
-                                            <td><strong>{{resource.TITLE}}</strong></td>
-                                            <td>{{resource.DESCRIPTION}}</td>
-                                            <td><a href="{{resource.LINK}}" class="btn btn-block btn-theme">Link</a></td>
+                                            <td><strong ng-bind="resource.TITLE"></strong></td>
+                                            <td ng-bind="resource.DESCRIPTION"></td>
+                                            <td ng-bind="Link"><a href="{{resource.LINK}}" class="btn btn-block btn-theme"></a></td>
                                         </tr>
                                         <span ng-show="(fs_dir.sgResources.directory | filter:search).length == 0">
                                             <h2 id="matchMessage">No Results</h2>
