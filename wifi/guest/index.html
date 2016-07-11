@@ -1,0 +1,229 @@
+
+<!DOCTYPE html><html class=''>
+<head>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.5/css/weather-icons-wind.min.css'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat'>
+<style>body {
+  /*background: url(https://drive.google.com/uc?export=download&id=0B41DdgPqKzCacHBEamd3Q2ZpYTA) no-repeat center center fixed;*/
+  background-size: cover;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+    color: white;
+}
+
+body h1 {
+  background:  rgba(255, 153, 0, 0.8);
+  color: #fff;
+  display: inline-block;
+  padding: 17px;
+}
+
+.jumbotron {
+  text-align: center;
+}
+
+.container {
+  display: inline-block;
+  margin: auto;
+}
+
+.blockHead {
+  background:  rgba(255, 153, 0, 0.8);
+  text-align: left;
+}
+
+.blockHead p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 800;
+  margin: 0;
+  padding: 14px 20px;
+  text-transform: uppercase;
+}
+
+.blockBody {
+  background:  rgba(255, 153, 0, 0.5);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+.blockBody #location {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  padding: 14px 20px;
+}
+
+#owm-temp {
+  display: inline-block;
+  font-size: 100px;
+  font-weight: 800;
+  margin: 0;
+  padding: 0 20px;
+  vertical-align: top;
+}
+
+.additional {
+  display: inline-block;
+  padding: 0 20px;
+  vertical-align: top;
+}
+
+.icon-block {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#owm-icon {
+  font-size: 80px;
+}
+
+.wind-block {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+#owm-wind-icon {
+  font-size: 80px;
+}</style></head><body>
+<title>Welcome</title>
+<div class="jumbotron">
+  <div class="container">
+    <div class="blockHead">
+        <p>We hope you enjoy your visit! If you have any trouble with the Wi-Fi, shoot an email to <a href="mailto:wifi@gofisk.com">wifi@gofisk.com</a></p>
+    </div>
+    <div class="blockBody">
+      <p id="location"></p>
+      <p id="owm-temp"></p>
+      <div class="additional">
+        <p id="owm-temp-max">HIGH: <span></span></p>
+        <p id="owm-temp-min">LOW: <span></span></p>
+        <p id="owm-humidity"><i class="wi wi-humidity"></i> <span></span></p>
+      </div>
+      <div class="icon-block">
+        <i id="owm-icon"></i>
+        <p id="owm-description"></p>
+      </div>
+      <div class="wind-block">
+        <p><i id="owm-wind-icon"></i></p>
+        <p id="owm-wind-speed"></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script>var owmApiKey = 'a5fa6deab88fe51ae1f33c01dfe97ab2';
+var owmUrl = 'http://api.openweathermap.org/data/2.5/weather?callback=?';
+var owmDailyUrl = 'http://api.openweathermap.org/data/2.5/forecast/daily?callback=?';
+var fCountries = [
+    'BS',
+    'BZ',
+    'KY',
+    'PW',
+    'US',
+    'PR',
+    'AS'
+];
+$(document).ready(function () {
+    $.ajax({
+        url: 'http://ip-api.com/json',
+        success: function (response) {
+            var useUnits = 'metric';
+            if (fCountries.indexOf(response.countryCode) > 0) {
+                useUnits = 'imperial';
+            }
+            var rawCity = response.city;
+            var ipCity = /[^\(]*/.exec(rawCity)[0];
+            $.getJSON(owmUrl, {
+                q: ipCity,
+                type: 'like',
+                units: useUnits,
+                APPID: owmApiKey
+            }).done(parseWeather);
+            $.getJSON(owmDailyUrl, {
+                q: ipCity,
+                type: 'like',
+                cnt: '1',
+                units: useUnits,
+                APPID: owmApiKey
+            }).done(parseDailyWeather);
+        },
+        dataType: 'json',
+        statusCode: {
+            429: function () {
+                alert('Number of tries exceeded');
+            }
+        }
+    });
+});
+function parseWeather(data) {
+    var dayTime = '-night-';
+    if (data.dt >= data.sys.sunrise && data.dt < data.sys.sunset) {
+        var dayTime = '-day-';
+    }
+    var useUnitLetter = '\xB0C';
+    if (fCountries.indexOf(data.sys.country) > 0) {
+        useUnitLetter = '\xB0F';
+    }
+    var owmIconStr = 'wi wi-owm' + dayTime + data.weather[0].id;
+    var windClass = 'wi wi-wind from-' + data.wind.deg + '-deg';
+    console.log(data.main.temp);
+    $('body').css('background', 'url(' + getBackground(data.weather[0].main) + ') no-repeat center center fixed');
+    $('#location').html(data.name);
+    $('#owm-temp').html(Math.round(data.main.temp) + useUnitLetter);
+    $('#owm-humidity span').html(data.main.humidity + '%');
+    $('#owm-icon').removeClass().addClass(owmIconStr);
+    $('#owm-description').html(data.weather[0].description);
+    $('#owm-wind-speed').html(data.wind.speed + ' m/s');
+    $('#owm-wind-icon').removeClass().addClass(windClass);
+}
+function parseDailyWeather(data) {
+    var useUnitLetter = '\xB0C';
+    if (fCountries.indexOf(data.city.country) > 0) {
+        useUnitLetter = '\xB0F';
+    }
+    $('#owm-temp-max span').html(Math.round(data.list[0].temp.max) + useUnitLetter);
+    $('#owm-temp-min span').html(Math.round(data.list[0].temp.min) + useUnitLetter);
+}
+function getBackground(mainCondition) {
+    var bgUrl;
+    switch (mainCondition) {
+    case 'Thunderstorm':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCaaW1vVUVjRTBuX3c';
+        break;
+    case 'Drizzle':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCaempENF8ycUFHX2M';
+        break;
+    case 'Rain':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCaempENF8ycUFHX2M';
+        break;
+    case 'Snow':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCaWkhXU2dra1RhbTQ';
+        break;
+    case 'Atmosphere':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCaOWFHSGY5MUt5Qm8';
+        break;
+    case 'Clouds':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCacHBEamd3Q2ZpYTA';
+        break;
+    case 'Extreme':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCaaW1vVUVjRTBuX3c';
+        break;
+    case 'Additional':
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCacHBEamd3Q2ZpYTA';
+        break;
+    default:
+        bgUrl = 'https://drive.google.com/uc?export=download&id=0B41DdgPqKzCacHBEamd3Q2ZpYTA';
+    }
+    return bgUrl;
+}
+//# sourceURL=pen.js
+</script>
+</body></html>
