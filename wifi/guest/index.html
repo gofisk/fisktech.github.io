@@ -133,7 +133,7 @@ var fCountries = [
 ];
 $(document).ready(function () {
     $.ajax({
-        url: 'http://ip-api.com/json',
+        url: 'https://ip-api.com/json',
         success: function (response) {
             var useUnits = 'metric';
             if (fCountries.indexOf(response.countryCode) > 0) {
