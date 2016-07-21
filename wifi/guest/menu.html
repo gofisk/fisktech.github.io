@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Fisk Guest Wireless</title>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        
+<style>
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.landing {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('http://res.cloudinary.com/tempest/image/upload/c_limit,cs_srgb,dpr_1.0,q_80,w_10000/MTM2NDU2MTg4MTgyMTQ0NjA3.jpg');
+    background-size: cover;
+}
+
+.button_container {
+    width: 32px;
+    height: 32px;
+    background: #2ecc71;
+    border: 20px solid #2ecc71;
+    border-radius: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.button_container span {
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: #333;
+    transition: all .35s ease;
+}
+
+.middle {
+    top: 15px;
+}
+
+.bottom {
+    top: 30px;
+}
+
+.button_container.active .top {
+    transform: translateY(15px) translateX(0px) rotate(405deg);
+    background: #2f0f26;
+}
+
+.button_container.active .middle {
+    opacity: 0;
+}
+
+.button_container.active .bottom {
+    transform: translateY(-15px) translateX(0px) rotate(495deg);
+    background: #2f0f26;
+}
+
+.menu {
+    opacity: 0;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background: #E8E8E8;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    position: fixed;
+    transition: all .5s ease;
+}
+
+.menu.open {
+    opacity: 1;
+    width: 300px;
+    height: 300px;
+}
+
+a {
+    color: #2f0f26;
+    text-align: center;
+    text-decoration: none;
+    font-family: fontawesome;
+    font-size: 30px;
+    transition: all .5s ease;
+}
+
+/*NORTH*/
+a:nth-of-type(1):before {
+    content: '\f05a';
+}
+
+/*SOUTH*/
+a:nth-of-type(2):before {
+    content: '\f015';
+}
+
+/*WEST*/
+a:nth-of-type(3):before {
+    content: '\f1d9';
+}
+
+/*EAST*/
+a:nth-of-type(4):before {
+    content: '\f002';
+}
+a:nth-of-type(1) {
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+a:nth-of-type(2) {
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+a:nth-of-type(3) {
+    position: fixed;
+    top: 50%;
+    left: 20%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+a:nth-of-type(4) {
+    position: fixed;
+    top: 50%;
+    left: 80%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="landing"></div>
+
+<div class="button_container">
+  <span class="top"></span>
+  <span class="middle"></span>
+  <span class="bottom"></span>
+</div>
+
+<div class="menu">
+  <!--NORTH--><a href="#"><span></span></a>
+  <!--SOUTH--><a href="https://gofisk.com"><span></span></a>
+  <!--WEST--><a href="mailto:wifi@gofisk.com?subject=Fisk%20Guest%20Wi-Fi"><span></span></a>
+  <!--EAST--><a href="http://www.google.com"><span></span></a>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
+
+<script>
+      window.onload = function () {
+        $('.button_container').toggleClass('active');
+        $('.menu').toggleClass('open');
+    $('.button_container').click(function () {
+        $('.button_container').toggleClass('active');
+        $('.menu').toggleClass('open');
+    });
+};
+    </script>
+  </body>
+</html>

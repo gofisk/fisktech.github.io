@@ -1,175 +1,122 @@
 <!DOCTYPE html>
-<html >
-  <head>
-    <meta charset="UTF-8">
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name="robots" content="noindex">
 
-    <title>Fisk Guest Wireless</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
-    padding: 0;
-    margin: 0;
+  margin: 0;
+  font-weight: 500;
+  font-family: 'HelveticaNeue';
 }
 
-.landing {
-    width: 100vw;
-    height: 100vh;
-    background-image: url('http://res.cloudinary.com/tempest/image/upload/c_limit,cs_srgb,dpr_1.0,q_80,w_10000/MTM2NDU2MTg4MTgyMTQ0NjA3.jpg');
-    background-size: cover;
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #373B44;
+  height: 100vh;
+}
+section:nth-of-type(2n) {
+  background-color: #2ecc71;
 }
 
-.button_container {
-    width: 32px;
-    height: 32px;
-    background: #2ecc71;
-    border: 20px solid #2ecc71;
-    border-radius: 50%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    cursor: pointer;
-    z-index: 1;
+.intro {
+  height: 90vh;
 }
 
-.button_container span {
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    background: #333;
-    transition: all .35s ease;
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+    
+h1 {
+  font-size: 5em;
+  display: block;
+  color: white;
+  font-weight: 300;
 }
 
-.middle {
-    top: 15px;
+p {
+  font-size: 2.5em;
+  font-weight: 500;
+  color: #fff;
+}
+    
+@media (max-width: 600px) {
+  h1 {
+  font-size: 2.5em;
+  font-weight: 300;
 }
 
-.bottom {
-    top: 30px;
+p {
+  font-size: 1.0em;
+  font-weight: 500;
 }
-
-.button_container.active .top {
-    transform: translateY(15px) translateX(0px) rotate(405deg);
-    background: #2f0f26;
-}
-
-.button_container.active .middle {
-    opacity: 0;
-}
-
-.button_container.active .bottom {
-    transform: translateY(-15px) translateX(0px) rotate(495deg);
-    background: #2f0f26;
-}
-
-.menu {
-    opacity: 0;
-    width: 0px;
-    height: 0px;
-    border-radius: 50%;
-    background: #E8E8E8;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    position: fixed;
-    transition: all .5s ease;
-}
-
-.menu.open {
-    opacity: 1;
-    width: 300px;
-    height: 300px;
+    
+p span {
+    text-decoration: line-through;
 }
 
 a {
-    color: #2f0f26;
-    text-align: center;
+  font-weight: 700;
+  color: #373B44;
+  position: relative;
     text-decoration: none;
-    font-family: fontawesome;
-    font-size: 30px;
-    transition: all .5s ease;
+}
+a:hover {
+  opacity: 0.8;
+}
+a:active {
+  top: 1px;
+}
+    
+.darkLink {
+    color: #fff !important;
 }
 
-/*NORTH*/
-a:nth-of-type(1):before {
-    content: '\f05a';
-}
+</style></head><body>
+<section class="intro">  
+  <div class="content">
+    <h1>Welcome!</h1>
+    <p>Home is where the <span>heart</span> free Wi-Fi is. Enjoy!</p>
+ </div>
+</section>
 
-/*SOUTH*/
-a:nth-of-type(2):before {
-    content: '\f015';
-}
+<section>  
+  <div class="content">
+    <h1>You're connected and ready to browse the web in hyper-speed!</h1>
+ </div>
+</section>
 
-/*WEST*/
-a:nth-of-type(3):before {
-    content: '\f1d9';
-}
+<section>  
+  <div class="content">
+    <h1><a href="http://google.com" class="darkLink">Try a Search</a></h1>
+    <h1><a href="http://mail.google.com" class="darkLink">Check Gmail</a></h1>
+    <h1><a href="http://netflix.com" class="darkLink">Watch Netflix</a></h1>
+ </div>
+</section>
 
-/*EAST*/
-a:nth-of-type(4):before {
-    content: '\f002';
-}
-a:nth-of-type(1) {
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
+<section>  
+  <div class="content">
+    <h1>Questions</h1>
+    <p>Why am I seeing this webpage?</p>
+    <h1><a href="mailto:wifi@gofisk.com?subject=Guest%20Wi-Fi">Email Scott</a></h1>
+    <p>Why is the network so slow?</p>
+    <h1><a href="mailto:wifi@gofisk.com?subject=Guest%20Wi-Fi">Email Scott</a></h1>
+    <p>What is the meaning of life?</p>
+    <h1><a href="mailto:wifi@gofisk.com?subject=Guest%20Wi-Fi">Email Scott</a></h1>
+    <p>...and for everything else</p>
+    <h1><a href="mailto:wifi@gofisk.com?subject=Guest%20Wi-Fi">Email Scott</a></h1>
+ </div>
+</section>
 
-a:nth-of-type(2) {
-    position: fixed;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-a:nth-of-type(3) {
-    position: fixed;
-    top: 50%;
-    left: 20%;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-a:nth-of-type(4) {
-    position: fixed;
-    top: 50%;
-    left: 80%;
-    transform: translateX(-50%) translateY(-50%);
-}
-
-</style>
-</head>
-
-<body>
-
-<div class="landing"></div>
-
-<div class="button_container">
-  <span class="top"></span>
-  <span class="middle"></span>
-  <span class="bottom"></span>
-</div>
-
-<div class="menu">
-  <!--NORTH--><a href="#"><span></span></a>
-  <!--SOUTH--><a href="https://gofisk.com"><span></span></a>
-  <!--WEST--><a href="mailto:wifi@gofisk.com?subject=Fisk%20Guest%20Wi-Fi"><span></span></a>
-  <!--EAST--><a href="http://www.google.com"><span></span></a>
-</div>
-
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/wow/0.1.12/wow.min.js'></script>
-
-<script>
-      window.onload = function () {
-        $('.button_container').toggleClass('active');
-        $('.menu').toggleClass('open');
-    $('.button_container').click(function () {
-        $('.button_container').toggleClass('active');
-        $('.menu').toggleClass('open');
-    });
-};
-    </script>
-  </body>
+</body>
 </html>
