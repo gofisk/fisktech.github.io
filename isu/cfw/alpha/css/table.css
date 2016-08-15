@@ -1,0 +1,81 @@
+#filters {
+    padding-bottom: 60px;
+}
+
+table.cfwTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: -50px !important;
+}
+table.cfwTable thead tr th {
+    padding: 12px 8px;
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+}
+table.cfwTable tbody tr td {
+    padding: 8px;
+    border-bottom: 1px solid #666;
+}
+table.cfwTable tbody tr td h3{
+    margin-top: -2px;
+    margin-bottom: -30px;
+    color: #cc0000
+}
+table.cfwTable tbody tr td h4{
+    margin-bottom: 5px;
+}
+table.cfwTable tbody tr td p{
+    padding: 10px;
+}
+
+table.cfwTable thead tr th {
+    background-color: #f6f6f6;
+    color: #333;
+}
+table.cfwTable thead tr th a{
+    color: #333 !important;
+}
+
+table.cfwTable tbody tr:nth-of-type(odd) {
+    background-color: #fff;
+}
+table.cfwTable tbody tr:nth-of-type(even) {
+    background-color: #f6f6f6;
+}
+
+@media (max-width: 560px) {
+    /* Change away from table layout */
+    table, thead, tbody, th, tr, td {
+        display: block;
+        width: 100%;
+    }
+    
+    table.cfwTable thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    table.cfwTable tbody tr {
+        border-collapse: collapse;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: 1px solid #ababab;
+        border-top: 7px solid #cc3333;
+    }
+    table.cfwTable tbody tr td {
+        border: none;
+        padding: 0px;
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+    /*UPDATE TITLE*/
+    table.cfwTable tbody tr td:nth-child(4) {
+        content: "Test"
+    }
+    
+    /*UPDATE FRIENDLY DATE*/
+    table.cfwTable tbody tr td:nth-child(2) {
+        margin-bottom: 5px;
+    }
+}
