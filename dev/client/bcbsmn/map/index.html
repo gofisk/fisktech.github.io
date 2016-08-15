@@ -1,0 +1,104 @@
+
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+            <!-- Force latest rendering mode in IE -->
+            <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+            <title>BCBSMN EAGAN CAMPUS</title>
+            <meta name="description" content="" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            
+            <link rel="stylesheet" type="text/css" href="css/map.css" />
+            <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+            <link rel="stylesheet" type="text/css" href="css/plugins.css" />
+            <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.css" />
+            <link rel="stylesheet" type="text/css" href="css/mobile.css"  media="only screen and (max-width: 581px)" >
+                <!--[if lte IE 8]>
+                 <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.6.4/leaflet.ie.css" />
+                 <![endif]-->
+                <script type="text/javascript" src="js/jquery.min.js"></script>
+                <script type="text/javascript" src="js/leaflet.js"></script>
+                <script type="text/javascript" src="js/jquery.mmenu.js"></script>
+                <script type="text/javascript" src="js/OSMBuildings-Leaflet.js"></script>
+                <script type="text/javascript" src="js/popups.js"></script>
+                <script type="text/javascript" src="js/polygons.js"></script>
+                <script type="text/javascript" src="js/clickable.js"></script>
+                <script type="text/javascript" src="js/navigation.js"></script>
+                <script type="text/javascript" src="js/leaflet.label.js"></script>
+                <script type="text/javascript" src="js/L.Control.Locate.js"></script>
+                <script type="text/javascript" src="js/help.js"></script>
+                
+                
+                <!-- Google tracking code-->
+
+                
+                <script type="text/javascript">
+                    $(function() {
+                      $('nav#menu').mmenu({
+                                          slidingSubmenus: false,
+                                          position: "right",
+                                          zposition: "front"
+                                          });
+                      });
+                </script>
+    </head>
+    
+    <body>
+        <script>jQuery('body').addClass('js');</script>
+        <div id="header">
+            
+            <a href="http://www.bluecrossmn.com" class="logo"><img src="images/logo.jpg" height="50px" title="Blue Cross Blue Shield of Minnesota" alt="Blue Cross Blue Shield Logo"/></a>
+            <a href="#menu" class="menubutton button">Menu</a>
+            <a href="#" class="helpbutton showhide button">Help</a>
+        </div>
+        
+        <div id="content">
+            <nav id="menu">
+                <ul>
+                    <li><a href="#mm-m0-p1" class="mm-subopen fix">Campus Buildings</a>
+                        <ul id="mm-m0-p1">
+                            <li><a href="#" class="M">Main Building</a></li>
+							<li><a href="#" class="Y">Yankee Place</a></li>
+							<li><a href="#" class="R">River Park I</a></li>
+							<li><a href="#" class="P">River Park II</a></li>
+							<li><a href="#" class="U">Blue Cross University</a></li>
+							<li><a href="#" class="C">Child Development Center</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p2" class="mm-subopen fix">Features</a>
+                        <ul id="mm-m0-p2">
+                            <li><a href="#" class="ASB">Garden</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="#mm-m0-p8" class="mm-subopen fix">Parking Lots</a>
+                        <ul id="mm-m0-p8">
+                            <li><a href="#" class="maincampus1">Main Building Parking Lot</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                
+            </nav>
+            <div id="map">
+                
+            </div>
+        </div>
+        
+        <div id="help"><a title="Close"><img src="images/close.png" width="30" height="30" alt="Close"></a>
+            <h1>How to use this map</h1>
+            <img src="images/menu.png" alt="Example menu button" class="example" >
+            <p>Click on the menu button in the top right corner to locate main campus buildings</p>
+            <img src="images/help.png" alt="Example help button" class="example">
+            <p>Click on the help button in the top right corner to display this help menu at any time</p>
+            <img src="images/camera.png" alt="Example help button" class="example">
+            <p>Click on the markers to view pictures and 360° virtual tours</p>
+            <h2>Questions/Comments?</h2>
+			Email the developer: <a href="mailto:dev@gofisk.com?Subject=BCBSMN%20Map">dev@gofisk.com</a>
+        </div>
+
+        <script src="js/main.js"></script>
+        <script>jQuery('body').removeClass('js');</script>
+    </body>
+</html>
