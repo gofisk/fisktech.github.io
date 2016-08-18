@@ -22,9 +22,10 @@ function time() {
 	hours = hours ? hours : 12; //If the hour is 0, change it to 12
 	minutes = minutes < 10 ? '0'+minutes : minutes;
 	var strTime = ('0' + hours).slice(-2) + ':' + minutes + ' ' + label;
-	document.getElementById("time").innerHTML = strTime; //FIX THIS: Logs an Error When Not Showing
+	document.getElementById("time").innerHTML = strTime;
 }
 setInterval(time, 1000); /*Update Time Every Second*/
+
 /*================END DATE AND TIME====================*/
 
 angular.module('bcbsmn_it_pp', ['firebase', 'ngTouch'])

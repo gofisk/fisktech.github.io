@@ -1,3 +1,5 @@
+/*===============GENERAL===============*/
+
 * {
   box-sizing: border-box;
 }
@@ -9,7 +11,7 @@ body {
   background: black;
 }
 
-/*Main Background*/
+/*===============MAIN===============*/
 .main {
 	position: fixed; 
 	top: 0; left: 0; bottom: 0; right: 0;
@@ -25,6 +27,7 @@ a {
 	text-align: center;
 }
 
+/*===============SCOREBOARD===============*/
 .scoreBoard {
   flex: 1; display: flex;
   justify-content: space-between;
@@ -59,12 +62,12 @@ a {
   color: white; /*Player Name*/
 }
 
-/*Left Side is Player 1*/
+/*===============PLAYER 1===============*/
 .display.left .player-left {background: #1e90ff; /*Dodger Blue*/}
 .display.left .isServing {order: 1;}
 .display.left .isNotServing {order: -1;}
 
-/*Right Side is Player 2*/
+/*===============PLAYER 2===============*/
 .display.right .player-right {background: #00bfff; /*Deep Sky Blue*/}
 .display.right .isServing {order: -1;}
 .display.right .isNotServing {order: 1;}
@@ -73,6 +76,8 @@ a {
   color: white;
   background: #ff0040; /*Carmine Red*/
 }
+
+/*===============PLAYERS===============*/
 
 .player {
   flex: 1;
@@ -114,6 +119,8 @@ a {
    opacity: .5; 
 }
 
+/*===============HEADER===============*/
+
 header {
   display: flex;
   justify-content: center;
@@ -125,6 +132,8 @@ header {
   border-bottom: none;
   text-align: center;
 }
+
+/*===============FOOTER===============*/
 
 footer {
   display: flex;

@@ -44,12 +44,12 @@ var autopad = {autoPanPaddingBottomRight: [50,50],autoPanPaddingTopLeft: [50,120
 	(new L.geoJson(C, {style: hidden})).bindLabel('Child Development Center').addTo(map).bindPopup (C_pop,(autopad));
 
 //ADD VIRTUAL TOUR MARKERS
-    L.marker([44.830133, -93.191886], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/HUB.html"></iframe>',(autopad));
-    L.marker([44.832035, -93.193818], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/HUB.html"></iframe>',(autopad));
-    L.marker([44.833785, -93.198176], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/HUB.html"></iframe>',(autopad));
-    L.marker([44.835778, -93.198315], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/HUB.html"></iframe>',(autopad));
-    L.marker([44.827500, -93.196574], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/HUB.html"></iframe>',(autopad));
-    L.marker([44.835841, -93.195321], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/HUB.html"></iframe>',(autopad));
+    L.marker([44.830133, -93.191886], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/demo.html"></iframe>',(autopad));
+    L.marker([44.832035, -93.193818], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/demo.html"></iframe>',(autopad));
+    L.marker([44.833785, -93.198176], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/demo.html"></iframe>',(autopad));
+    L.marker([44.835778, -93.198315], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/demo.html"></iframe>',(autopad));
+    L.marker([44.827500, -93.196574], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/demo.html"></iframe>',(autopad));
+    L.marker([44.835841, -93.195321], {icon: camera}).bindLabel('360° Virtual Tour').addTo(map).bindPopup('<iframe width="700" height="400" allowfullscreen style="border-style:none;" src="360/demo.html"></iframe>',(autopad));
         
 //ADD VIDEO MARKERS
     L.marker([52.6204,-1.1236], {icon: video}).bindLabel('Watch Video').addTo(map).bindPopup('<iframe src=\"https://www.youtube.com/embed/D-bOttxNEvQ\" frameborder=\"0\" allowfullscreen width=\"700px\" height=\"400px\"></iframe>',(autopad));
