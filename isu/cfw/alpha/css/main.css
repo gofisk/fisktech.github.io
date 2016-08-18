@@ -604,8 +604,33 @@ footer .social-footer li:hover a {
 	color: #CC0000;
 }
 
-#close-menu {
-	font-size: 40px;
+/* Form Control */
+
+.form-control {
+	font-size: 18px;
+	position: relative;
+	left: 0;
+	height: auto;
+	padding: 20px 30px;
+	border-radius: 0;
+	box-shadow: 0;
+}
+
+.btn.btn-submit {
+	width: 100%;
+	margin-top: 30px;
+	color: #CC0000;
+	border: 2px solid #fff;
+	background: #fff;
+}
+
+.btn.btn-submit:focus {
+	font-weight: bold;
+}
+
+.btn.btn-submit:hover {
+	color: #CC0000;
+	background: #fff;
 }
 
 /* Mobile Nav */
