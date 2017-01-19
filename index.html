@@ -1,109 +1,391 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The official website of Scott Benjamin Fisk. ">
-    <meta name="keywords" content="scott, fisk, web, development, technology, computers, design, gofisk, iowa, state, university">
-    <meta name="author" content="Scott Fisk">
-    <title>Scott Benjamin Fisk</title>
-<style>
-@import url(https://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css);
-@import url(https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic&subset=latin,latin-ext);
-body, html, p, a, span {
-  padding: 0;
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  color: #fff;
-  text-decoration: none;
-  font-family: 'Lato', serif;
-  font-weight: 300;
-}
-
-.grid {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-}
-.grid a {
-  padding: 0;
-  margin: 0;
-  position: relative;
-  width: 50%;
-  height: 100%;
-  float: left;
-  overflow: hidden;
-  background: #49A34B;
-}
-.grid a:-webkit-any-link {
-  text-decoration: none;
-}
-.grid a span {
-  position: absolute;
-  bottom: .6em;
-  left: 50%;
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  -moz-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  -webkit-transition: all 0.5s ease;
-  -webkit-transition-delay: 0.1s;
-  transition: all 0.5s ease 0.1s;
-  font-size: 3em;
-  color: #fff;
-}
-.grid a i {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -moz-transform: translateX(-50%) translateY(-50%);
-  -ms-transform: translateX(-50%) translateY(-50%);
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
-  -moz-transition: all 0.5s ease 0.1s;
-  -o-transition: all 0.5s ease 0.1s;
-  -webkit-transition: all 0.5s ease;
-  -webkit-transition-delay: 0.1s;
-  transition: all 0.5s ease 0.1s;
-  font-size: 6.8em;
-}
-
-.grid a:nth-child(odd) {
-    background-color: #5AB953;
-}
-
-@media (max-width: 1024px) {
-    .grid a span {
-        font-size: 2em;
-        bottom: 2em;
-    }
-}
-    
-.grid a {
-  -moz-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-}
-.grid a:hover {
-  z-index: 15;
-  background: #4169e1;
-}
-</style>
+  <title>Scott B. Fisk</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Icon Font -->
+  <link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" />
+  <!-- Font Awesome -->
+  <link type="text/css" rel="stylesheet" href="assets/css/font-awesome.min.css" />
+  <!-- Materialize -->
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize.css" media="screen" />
+  <!-- Materialize Theme -->
+  <link type="text/css" rel="stylesheet" href="assets/css/materialize-theme.css" />
+  <!-- mCustomScrollbar -->
+  <link type="text/css" rel="stylesheet" href="assets/css/jquery.mCustomScrollbar.css" />
+  <!-- Owl Carousel -->
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.css" />
+  <link rel="stylesheet" type="text/css" href="assets/css/owl.theme.css">
+  <!-- Styles -->
+  <link type="text/css" rel="stylesheet" href="assets/css/style.css" />
+  <!-- Responsive -->
+  <link type="text/css" rel="stylesheet" href="assets/css/responsive.css" />
+  <!-- Theme -->
+  <link type="text/css" rel="stylesheet" href="assets/themes/color1/color-style/color.css" id="switch_style" />
 </head>
-<body>
-    <section class="grid">
-        <a href="https://gofisk.com/about">		     
-            <i class="ion-information"></i>
-            <span>go/about</span>		
-        </a>
-        <a href="https://gofisk.com/code">		
-            <i class="ion-ios7-lightbulb"></i>
-            <span>go/code</span>			
-        </a>	
-    </section>
+
+<body id="page-top" class="scrollspy">
+  <div class="wrapper">
+    <!-- Right Column -->
+    <div class="right-column">
+      <!-- Header -->
+      <header class="dark-bg">
+        <ul class="social-links">
+        <li>
+            <a href="mailto:hello@gofisk.com" class="tooltipped" data-position="bottom" data-delay="20" data-tooltip="Email Me"><i class="fa fa-envelope"></i></a>
+          </li>
+        <li>
+            <a href="https://blog.gofisk.com/" class="tooltipped" data-position="bottom" data-delay="20" data-tooltip="My Blog"><i class="fa fa-pencil-square-o"></i></a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/gofisk/" class="tooltipped" data-position="bottom" data-delay="20" data-tooltip="LinkedIn"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+        <div class="user_name-title">
+          <h2>SCOTT B. FISK</h2>
+          <p>Student at Iowa State University</p>
+        </div>
+      </header>
+      <!-- # Header End # -->
+      <!-- Personal Information -->
+      <div class="user-wrapper">
+        <!-- Profile Image -->
+        <div class="profile-image"> <img src="images/Profile_Image.png" alt="GÖKHAN KARA" class="responsive-img"> </div>
+        <!-- # Profile Image End # -->
+        <div class="user-content">
+          <ul class="collection">
+            <li class="collection-item">
+              <span class="bolder">Hello! My name is Scott Fisk.</span>
+              <br>
+              <br> Welcome to my personal home on the World Wide Web! I am currently a student at Iowa State University. I am working towards a bachelor's degree in Management Information Systems paired with a minor in Technical Communication. </li>
+              <br />
+            <li class="collection-item">
+              <a href="#" target="_blank" class="btn waves-effect waves-light dark-bg">RESUME<i class="material-icons">file_download</i></a>
+              <a href="mailto:hello@gofisk.com" class="btn waves-effect waves-light light-bg">CONTACT<i class="material-icons">email</i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <!-- # Personal Information End # -->
+    </div>
+    <!-- # Right Column End # -->
+    <!-- Left Column -->
+    <div class="left-column">
+      <header id="header">
+      <!-- Navigation -->
+      <div id="navbar" class="navbar-fixed">
+        <nav class="main-navigation light-bg">
+          <div class="nav-wrapper">
+            <ul>
+              <li>
+                <a href="#page-top" class="waves-effect">Hello</a>
+              </li>
+              <li>
+                <a href="#page-top" class="waves-effect">Education</a>
+              </li>
+              <li>
+                <a href="#works" class="waves-effect">Work Experience</a>
+              </li>
+              <li>
+                <a href="#portfolio" class="waves-effect">Portfolio</a>
+              </li>
+              <li>
+                <a href="#contact" class="waves-effect">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- # Navigation End # -->
+      <!-- Mobile Navigation -->
+      <div class="fixed-action-btn vertical click-to-toggle mobile-menu">
+        <a class="btn btn-floating btn-large light-bg"> <i class="large mdi-navigation-menu"></i> </a>
+        <ul>
+          <li>
+            <a class="btn-floating" href="#page-top"><i class="material-icons">home</i></a>
+          </li>
+          <li>
+            <a class="btn-floating white" href="#education"><i class="material-icons cyan-text text-darken-2">account_balance</i></a>
+          </li>
+          <li>
+            <a class="btn-floating light-green darken-3" href="#works"><i class="material-icons">work</i></a>
+          </li>
+          <li>
+            <a class="btn-floating light-green darken-3" href="#portfolio"><i class="material-icons">queue_play_next</i></a>
+          </li>
+          <li>
+            <a class="btn-floating lime darken-2" href="#contact"><i class="material-icons">mail_outline</i></a>
+          </li>
+        </ul>
+      </div>
+      <!-- # Mobile Navigation End # -->
+      <!-- Header Content -->
+      <div class="light-bg header-wrap">
+        <div class="header-content">
+          <h1>My name is <strong>Scott Fisk</strong></h1>
+          <span class="sub-text">[This website is under construction]</span>
+        </div>
+      </div>
+      <!-- # Header Content End # -->
+      </header>
+      <!-- Education -->
+      <section id="education" class="section scrollspy">
+        <!-- Icon -->
+        <span class="icon btn-floating btn-large white"><i class="material-icons cyan-text text-darken-2">account_balance</i></span>
+        <!-- # Icon End # -->
+        <!-- Title -->
+        <h2 class="cyan-text text-darken-2">Education</h2>
+        <!-- # Title End # -->
+        <!-- Table -->
+        <table class="highlight section-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>Area of Study</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col1"><img src="images/Education/isu_logo.png" alt="Iowa State University Red" class="circle"></td>
+              <td class="col2">Iowa State University</td>
+              <td class="col3">Management Information Systems<br />Technical Communication Minor</td>
+              <td class="col4">2014 - present</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="images/Education/ehs_logo.png" alt="Iowa State University Red" class="circle"></td>
+              <td class="col2">Eagan High School</td>
+              <td class="col3">N/A</td>
+              <td class="col4">2010 - 2014</td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- #  Table End # -->
+      </section>
+      <!-- # Education End # -->
+      <!-- Works -->
+      <section id="works" class="section scrollspy">
+        <!-- Icon -->
+        <span class="icon btn-floating btn-large light-green darken-3"><i class="material-icons">work</i></span>
+        <!-- # Icon End # -->
+        <!-- Title -->
+        <h2 class="light-green-text text-darken-3">Work experience</h2>
+        <!-- # Title End # -->
+        <!-- Table -->
+        <table class="highlight section-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th></th>
+              <th>Business Name / Department</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="col1"><img src="images/Works/isu_logo.png" alt="IT Group Social Media Company" class="circle"></td>
+              <td class="col2">Iowa State University</td>
+              <td class="col3">IT Technician</td>
+              <td class="col4">Aug 2014 - present</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="images/Works/ts_logo.png" alt="Guupzi" class="circle"></td>
+              <td class="col2">TEKsystems</td>
+              <td class="col3">Consultant (Infrastructure Technician)</td>
+              <td class="col4">Sep 2016 - Oct 2016</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="images/Works/bcbsmn_logo.png" alt="ReedLonely Company" class="circle"></td>
+              <td class="col2">Blue Cross &amp; Blue Shield of Minnesota</td>
+              <td class="col3">Systems Engineering Intel &amp; Linux Intern</td>
+              <td class="col4">May 2016 - Aug 2016</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="images/Works/coe_logo.png" alt="OutGo! PC Server System Company" class="circle"></td>
+              <td class="col2">City of Eagan</td>
+              <td class="col3">Recreation Leader - Sound Technician</td>
+              <td class="col4">May 2012 - Aug 2016</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="images/Works/ehs_logo.png" alt=" " class="circle"></td>
+              <td class="col2">Independent School District 196</td>
+              <td class="col3">A/V Technician, IT Support</td>
+              <td class="col4">May 2011 - May 2016</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="images/Works/dcp_logo.png" alt=" " class="circle"></td>
+              <td class="col2">Dakota County Parks</td>
+              <td class="col3">Visitor Services Specialist</td>
+              <td class="col4">Jun 2014 - Jan 2016</td>
+            </tr>
+            <tr>
+              <td class="col1"><img src="images/Works/Company_Logo_5.png" alt=" " class="circle"></td>
+              <td class="col2">Cedar Fair Entertainment Company</td>
+              <td class="col3">Park Services Team Member</td>
+              <td class="col4">May 2013 - Jul 2013</td>
+            </tr>
+          </tbody>
+          <!-- # Table End # -->
+        </table>
+      </section>
+      <!-- #  Works End # -->
+
+      <!-- Portfolio -->
+      <section id="portfolio" class="section scrollspy">
+        <!-- Icon -->
+        <span class="icon btn-floating btn-large light-green darken-3"><i class="material-icons">queue_play_next</i></span>
+        <!-- # Icon End # -->
+        <!-- Title -->
+        <h2 class="light-green-text text-darken-3">Portfolio</h2>
+          <hr />
+        <p class="light-green-text text-darken-3">This portfolio section is a work-in-progress. It is not fully functional at this point.</p>
+        <!-- # Title End # -->
+        <div id="Portfolio_Carousel" class="owl-carousel">
+          <!-- Portfolio Item -->
+          <div class="item portfolio-item">
+            <a href="#Portfolio_Detail" class="modal-trigger">
+              <h6 class="portfolio-name">Cyclone Family Weekend</h6>
+              <img src="images/Portfolio/cfw.png" class="responsive-img" alt="Verso – Digital Magazine">
+              <span class="portfolio-categories">Category,
+                <span class="light-green-text text-darken-3">Graphic Design, Web Design</span>
+              </span>
+            </a>
+          </div>
+          <!-- # Portfolio Item End # -->
+          <!-- Portfolio Item -->
+          <div class="item portfolio-item">
+            <a href="#Portfolio_Detail" class="modal-trigger">
+              <h6 class="portfolio-name">CyWear App UI Mockup</h6>
+              <img src="images/Portfolio/cywear.png" class="responsive-img" alt="French Cooking">
+              <span class="portfolio-categories">Category,
+                <span class="light-green-text text-darken-3">Graphic Design</span>
+              </span>
+            </a>
+          </div>
+          <!-- # Portfolio Item End # -->
+          <!-- Portfolio Item -->
+          <div class="item portfolio-item">
+            <a href="#Portfolio_Detail" class="modal-trigger">
+              <h6 class="portfolio-name">Interactive Online Map</h6>
+              <img src="images/Portfolio/bcbsmn_map.png" class="responsive-img" alt="LVC // Branding">
+              <span class="portfolio-categories">Category,
+                <span class="light-green-text text-darken-3">Web Design</span>
+              </span>
+            </a>
+          </div>
+          <!-- # Portfolio Item End # -->
+        </div>
+      </section>
+      <!-- # Portfolio End # -->
+    
+      <!-- Contact Me -->
+      <section id="contact" class="section scrollspy">
+        <!-- Icon -->
+        <span class="icon btn-floating btn-large lime darken-2"><i class="material-icons">mail_outline</i></span>
+        <!-- # Icon End # -->
+        <!-- Title -->
+        <h2 class="lime-text text-darken-2">Contact Me</h2>
+        <!-- # Title End # -->
+        <!-- Contact Information -->
+        <div class="contact-information">
+          <div class="row">
+            <!-- Mail -->
+            <div class="col s6 l3">
+              <div class="icon"><i class="material-icons">email</i></div>
+              <p>hello@gofisk.com</p>
+            </div>
+            <!-- # Mail End # -->
+            <!-- Mobile -->
+            <div class="col s6 l3">
+              <div class="icon"><i class="material-icons">phone_iphone</i></div>
+              <p>651.500.9760</p>
+            </div>
+            <!-- # Mobile End # -->
+            <!-- Skype -->
+            <div class="col s6 l3">
+              <div class="icon"><i class="fa fa-linkedin-square"></i></div>
+              <p>LinkedIn / gofisk</p>
+            </div>
+            <!-- # Skype End # -->
+            <!-- Location -->
+            <div class="col s6 l3">
+              <div class="icon"><i class="material-icons">location_on</i></div>
+              <p>Ames, Iowa</p>
+            </div>
+            <!-- # Location End # -->
+            <div class="clearfix"></div>
+          </div>
+        </div>
+        <!-- # Contact Information End # -->
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="copyright">
+          <div class="row">
+            <div class="col s12 m6 l6 left light-bg">https://gofisk.com
+              <br>Copyright &copy; 2017</div>
+            <div class="col s12 m6 l6 right dark-bg">Contact Me!
+              <br>hello@gofisk.com
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- # Footer End # -->
+    </div>
+    <!-- # Left Column End # -->
+  </div>
+  <!-- Loader -->
+  <div class="page-loading">
+    <div class="preloader-wrapper big active">
+      <div class="spinner-layer border-color">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
+        </div>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- # Loader End -->
+  <!-- Portfolio Detail Modal -->
+  <div id="Portfolio_Detail" class="modal">
+    <div class="modal-content">
+      <a href="javascript:void(0)" class="modal-action modal-close close btn-floating btn waves-effect waves-teal white"><i class="material-icons light-green-text text-darken-3">close</i></a>
+      <h4 class="modal-title">Modal Title</h4>
+      <img src="images/Portfolio/Portfolio_Detail.png" class="responsive-img" alt="Alt Text">
+      <hr>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisinuli.</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="waves-effect btn-flat left light-green-text text-darken-3">MORE INFO</a>
+      <a href="#!" class="waves-effect btn-flat right light-green-text text-darken-3">WEB SITE</a>
+    </div>
+  </div>
+  <!-- # Portfolio Detail Modal End # -->
+  <!-- jQuery-->
+  <script type="text/javascript" src="assets/js/jquery-2.1.1.min.js"></script>
+  <!-- materialize -->
+  <script type="text/javascript" src="assets/js/materialize.js"></script>
+  <!-- jquery easing -->
+  <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+  <!-- mCustomScrollbar -->
+  <script type="text/javascript" src="assets/js/jquery.mCustomScrollbar.js"></script>
+  <script type="text/javascript" src="assets/js/jquery.mousewheel.js"></script>
+  <!-- Owl Carousel -->
+  <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script>
+  <!-- Modernizr -->
+  <script type="text/javascript" src="assets/js/modernizr.js"></script>
+  <!-- scripts init -->
+  <script type="text/javascript" src="assets/js/scripts.js"></script>
 </body>
+
 </html>
