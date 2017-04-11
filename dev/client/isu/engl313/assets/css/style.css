@@ -1,0 +1,76 @@
+* {
+    border-radius: 0 !important;
+}
+
+.main {
+    margin-top: 50px;
+}
+
+.navbar-toggle {
+    border-radius: 0;
+}
+
+.intro {
+    text-align: center;
+    background-color: #26A65B;
+    padding: 50px;
+    color: #F2F1EF;
+}
+
+.ssfooter {
+    text-align: center;
+    background-color: #26A65B;
+    color: #F2F1EF;
+    padding: 30px;
+}
+
+/*GALLERY STYLES*/
+
+.main-gallery {
+    margin: 20px 0px 20px 0px;
+}
+
+.gallery-cell {
+    width: 100%!important;
+    height: auto;
+    margin-right: 10px!important;
+}
+
+.gallery-cell img{
+    width: 100%!important; 
+    height: 100%;
+}
+
+/* position dots in gallery */
+.flickity-page-dots {
+    bottom: 12px;
+    left: -15px;
+}
+
+.flickity-page-dots .dot {
+    width: 8px;
+    height: 8px;
+    opacity: 1;
+    background: transparent;
+    border: 2px solid white;
+}
+
+.flickity-page-dots .dot.is-selected {
+    background: white;
+}
+    
+h1 {
+    color: #666 !important;
+    text-align: center;
+}
+
+.flickity-prev-next-button {
+    background:none;
+}
+.flickity-prev-next-button:hover {
+    background:none;
+    opacity:0.5
+}
+.flickity-prev-next-button .arrow {
+    fill:#fff;
+}
