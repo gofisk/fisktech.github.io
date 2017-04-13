@@ -6,7 +6,7 @@
 }
 
 .main {
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .navbar-toggle {
@@ -16,7 +16,7 @@
 .intro {
     text-align: center;
     background-color: #26A65B;
-    padding: 50px;
+    padding: 40px;
     color: #F2F1EF;
 }
 
@@ -87,8 +87,14 @@ h1 {
 /* NAVBAR MODS */
 
 /* navbar */
-.navbar-inverse {
-    height: 100px;
+.navbar-fixed-top {
+    min-height: 100px;
+}
+
+.navbar-nav > li > a {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    line-height: 100px;
 }
 
 .navbar-brand img {
@@ -96,67 +102,24 @@ h1 {
     height: 80px;
     position: fixed;
 }
-/* Title */
-.navbar-default .navbar-brand {
-    color: #f1be48;
-}
-.navbar-default .navbar-brand:hover,
-.navbar-default .navbar-brand:focus {
-    color: #fff;
-}
-/* Link */
-.navbar-default .navbar-nav > li > a {
-    color: #fff;
-}
-.navbar-default .navbar-nav > li > a:hover,
-.navbar-default .navbar-nav > li > a:focus {
-    color: #f1be48;
-}
-.navbar-default .navbar-nav > .active > a,
-.navbar-default .navbar-nav > .active > a:hover,
-.navbar-default .navbar-nav > .active > a:focus {
-    color: #555;
-    background-color: #E7E7E7;
-}
-.navbar-default .navbar-nav > .open > a,
-.navbar-default .navbar-nav > .open > a:hover,
-.navbar-default .navbar-nav > .open > a:focus {
-    color: #fff;
-    background-color: #f1be48;
-}
-/* Caret */
-.navbar-default .navbar-nav > .dropdown > a .caret {
-    border-top-color: #fff;
-    border-bottom-color: #fff;
-}
-.navbar-default .navbar-nav > .dropdown > a:hover .caret,
-.navbar-default .navbar-nav > .dropdown > a:focus .caret {
-    border-top-color: #f1be48;
-    border-bottom-color: #f1be48;
-}
-.navbar-default .navbar-nav > .open > a .caret,
-.navbar-default .navbar-nav > .open > a:hover .caret,
-.navbar-default .navbar-nav > .open > a:focus .caret {
-    border-top-color: #f1be48;
-    border-bottom-color: #f1be48;
-}
-/* Mobile version */
-.navbar-default .navbar-toggle {
-    border-color: #f1be48;
-}
-.navbar-default .navbar-toggle:hover,
-.navbar-default .navbar-toggle:focus {
-    background-color: #f1be48;
-}
-.navbar-default .navbar-toggle .icon-bar {
-    background-color: #fff;
-}
+
 @media (max-width: 767px) {
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-        color: #fff;
-    }
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
-    .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-          color: #f1be48;
-    }
+    .navbar-nav > li > a {
+    line-height: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;}
+    
+    .navbar-brand img {
+    padding: 0px;
+    margin: -8px;
+    height: 40px;
+    position: fixed;
+}
+    
+    .navbar-fixed-top {
+    min-height: 50px;
+}
+    .main {
+    margin-top: 50px;
+}
 }
