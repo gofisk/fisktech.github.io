@@ -9,20 +9,32 @@
     margin-top: 100px;
 }
 
+.content {
+    padding: 20px;
+}
+
 .navbar-toggle {
     border-radius: 0;
 }
 
 .intro {
     text-align: center;
-    background-color: #26A65B;
+    background-color: #93c47d;
     padding: 40px;
     color: #F2F1EF;
 }
 
+.features {
+    text-align: center;
+}
+
+.page-title {
+    text-align: left;
+}
+
 .ssfooter {
     text-align: center;
-    background-color: #26A65B;
+    background-color: #93c47d;
     color: #F2F1EF;
     padding: 30px;
 }
