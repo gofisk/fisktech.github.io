@@ -2315,7 +2315,7 @@ a.list-group-item-danger.active, a.list-group-item-danger:hover, a.list-group-it
 }
 .footer-logo, .footer-nav {
   float: left;
-  width: 20%;
+  width: 33.33%;
   padding: 0 20px;
 }
 @media (max-width: 768px) {

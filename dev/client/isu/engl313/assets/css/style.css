@@ -9,6 +9,33 @@
     margin-top: 100px;
 }
 
+p {
+    text-indent: 50px;
+    padding: 10px;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #333;
+}
+
+.darklink {
+    color: black;
+}
+
+.btn-theme {
+    background-color: #93c47d;
+    color: white;
+}
+
+.btn-dark {
+    background-color: #333;
+    color: white;
+}
+
 .content {
     padding: 20px;
 }
@@ -55,11 +82,38 @@
     width: 100%!important;
     height: auto;
     margin-right: 10px!important;
+    overflow: hidden;
 }
 
 .gallery-cell img{
     width: 100%!important; 
+    height: 100% !important;
+}
+
+.gallery-cell h3 {
+    margin-top: -250px;
+    color: white !important;
+    position: absolute;
+    text-align: center !important;
+    width: 100%;
+    left: 0px;
+}
+
+.gallery-cell p {
+    font-size: 20px;
+    margin-top: -175px;
+    color: white !important;
+    position: absolute;
+    text-align: center !important;
+    width: 100%;
+    left 0px;
+}
+
+.shade {
+    background-color: red;
+    overflow: hidden;
     height: 100%;
+    z-index: 2;
 }
 
 /* position dots in gallery */
@@ -115,23 +169,41 @@ h1 {
     position: fixed;
 }
 
+.navbar-inverse .navbar-text, .navbar-inverse .navbar-nav > li > a {
+  color: #93c47d;
+    font-size: 20px;
+}
+
 @media (max-width: 767px) {
     .navbar-nav > li > a {
-    line-height: 20px;
-    padding-top: 10px;
-    padding-bottom: 10px;}
+        line-height: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
     
     .navbar-brand img {
-    padding: 0px;
-    margin: -8px;
-    height: 40px;
-    position: fixed;
-}
+        padding: 0px;
+        margin: -8px;
+        height: 40px;
+        position: fixed;
+    }
     
     .navbar-fixed-top {
-    min-height: 50px;
-}
+        min-height: 50px;
+    }
+    
     .main {
-    margin-top: 50px;
+        margin-top: 50px;
+    }
+    
+    .gallery-cell h3 {
+    margin-top: -140px;
+    font-size: 30px;
+    color: white !important;
+    text-align: center !important;
+}
+
+.gallery-cell p {
+    display: none;
 }
 }
