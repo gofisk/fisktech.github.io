@@ -67,15 +67,17 @@ a:focus, a:hover, a:visited {
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
   margin: 8px auto 16px;
-
 }
 
 .card-current {
   background-color: #009688;
   color: #fff;
-  padding: 16px;
+  padding: 16px 24px;
   height: 375px;
   margin-bottom: 20px;
+}
+#location {
+    margin-top: 0px;
 }
 .card-current #location span {
   -webkit-animation-name: blink;
@@ -268,8 +270,7 @@ a:focus, a:hover, a:visited {
           <h4 id="summary">Summary</h4>
           <div class="temp">
             <div id="temperature">0</div>
-            <div id="unit1">°C</div>
-            <a id="unit2">/ °F</a>
+            <a id="unit2">°F</a>
           </div>
           <i id="icon" class="wi wi-na"></i>
           <div class="precip">
