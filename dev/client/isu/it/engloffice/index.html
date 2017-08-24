@@ -415,7 +415,7 @@ a:focus, a:hover, a:visited {
     }
   });
   $("#carousel").owlCarousel({
-    items : 5,
+    items : 7,
     itemsCustom : false,
     itemsDesktop : false,
     itemsDesktopSmall : false,
@@ -515,10 +515,10 @@ a:focus, a:hover, a:visited {
   function showUnits(unit){
     if(unit == "us"){
       $("#unit1").html("°F");
-      $("#unit2").html("/ °C");
+      $("#unit2").html("°F");
     }else{
-      $("#unit1").html("°C");
-      $("#unit2").html("/ °F");
+      $("#unit1").html("°F");
+      $("#unit2").html("°F");
     }
   }
   function showWindSpeed(units, windSpeed){
