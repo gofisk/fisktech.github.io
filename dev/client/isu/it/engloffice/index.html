@@ -451,6 +451,9 @@ a:focus, a:hover, a:visited {
     $.getJSON("https://freegeoip.net/json/", function(data){
       lat = data.latitude;
       lon = data.longitude;
+      //Manual Override for Ames
+      lat = 42.026620;
+      lon = -93.646484;
       showForecast();
     });
   }
