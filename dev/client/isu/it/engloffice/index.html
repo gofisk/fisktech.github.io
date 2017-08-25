@@ -507,7 +507,12 @@ a:focus, a:hover, a:visited {
     }
     if (hours == 0) {
         hours = 12;
+        dd = "AM";
     }
+    if (hours <= 12) {
+        dd = "AM";
+    }  
+    
 
     $("#day").html(day);
     $("#time").html(hours + ":" + minutes + " " + dd);
