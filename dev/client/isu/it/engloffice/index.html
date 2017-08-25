@@ -502,19 +502,18 @@ a:focus, a:hover, a:visited {
     }else{
       minutes = new Date(time*1000).getMinutes();
     }
-    if (hours >= 12) {
-        hours = hours - 12;
-        dd = "PM";
-    }
     if (hours == 0) {
         hours = 12;
         dd = "AM";
     }
     if (hours <= 12) {
         dd = "AM";
-    }  
+    } 
+    if (hours >= 12) {
+        hours = hours - 12;
+        dd = "PM";
+    }
     
-
     $("#day").html(day);
     $("#time").html(hours + ":" + minutes + " " + dd);
   }
