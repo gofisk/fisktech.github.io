@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang='en' class=''>
+<head><meta charset='UTF-8'><meta name="robots" content="noindex">
+
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css'>
+<style>
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,600,300);
+body {
+  background-color: #222;
+    background-image: url("http://khairkhod.com/wp-content/uploads/galleries/post-219/full/IAState.jpg");
+    background-size: cover;
+}
+
+canvas {
+  z-index: 9;
+}
+
+/*MODAL */
+.modal {
+  text-align: center;
+  color: white;
+}
+.modal h1, .modal h2, .modal h3, .modal h4, .modal h5 {
+  font-family: "Open Sans", sans-serif;
+}
+.modal p {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+/*CONTENT */
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.0);
+  border-radius: 0px;
+  border: none;
+}
+
+/*HEADER */
+.modal-header {
+  border: none;
+}
+.modal-header .close {
+  color: white;
+  font-size: 31px;
+  text-decoration: none;
+  z-index: 9999999999999999;
+  position: fixed;
+  right: 26px;
+}
+
+.top-image {
+  background-color: #fff;
+  top: 80px;
+  padding: 15px 0px;
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-bottom: 35px;
+  margin-top: 50px;
+}
+
+/*BODY */
+.modal-body p {
+  font-size: 20px;
+}
+.modal-body hr {
+  width: 120px;
+  margin: 15px auto;
+  border-top: 1px solid rgba(238, 238, 238, 0.31);
+}
+.modal-body p span {
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+/*FOOTER */
+.modal-footer {
+  border: none;
+  text-align: center;
+}
+    
+.modal-footer i {
+  color: red;
+}
+    
+    #countdown {
+        color: lawngreen;
+        font-size: 20px;
+    }
+    
+</style></head><body>
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="top-image">
+          <img src="https://tutsplus.github.io/merry-christmas-web-app-build/images/xmas-tree.png" alt="" />
+        </div>
+        <h1 class="modal-title">Happy Holidays!</h1>
+      </div>
+      <div class="modal-body">
+        <div id="countdown"></div>Until Winter Break
+        <hr />
+      </div>
+      <div class="modal-footer">
+            <h5>Made with <i class="fa fa-heart"></i> by English IT</h5>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script >$('#myModal').modal('show');
+
+var particleCount = 300;
+var particleMax   = 1000;
+var sky           = document.querySelector('.modal');
+var canvas        = document.createElement('canvas');
+var ctx           = canvas.getContext('2d');
+var width         = sky.clientWidth;
+var height        = sky.clientHeight;
+var i             = 0;
+var active        = false;
+var snowflakes    = [];
+var snowflake;
+
+canvas.style.position = 'absolute';
+canvas.style.left = canvas.style.top = '0';
+
+var Snowflake = function () {
+  this.x = 0;
+  this.y = 0;
+  this.vy = 0;
+  this.vx = 0;
+  this.r = 0;
+
+  this.reset();
+};
+
+Snowflake.prototype.reset = function() {
+  this.x = Math.random() * width;
+  this.y = Math.random() * -height;
+  this.vy = 1 + Math.random() * 3;
+  this.vx = 0.5 - Math.random();
+  this.r = 1 + Math.random() * 2;
+  this.o = 0.5 + Math.random() * 0.5;
+};
+
+function generateSnowFlakes() {
+  snowflakes = [];
+  for (i = 0; i < particleMax; i++) {
+    snowflake = new Snowflake();
+    snowflake.reset();
+    snowflakes.push(snowflake);
+  }
+}
+
+generateSnowFlakes();
+
+function update() {
+  ctx.clearRect(0, 0, width, height);
+
+  if (!active) {      
+    return;
+  }
+
+  for (i = 0; i < particleCount; i++) {
+    snowflake = snowflakes[i];
+    snowflake.y += snowflake.vy;
+    snowflake.x += snowflake.vx;
+
+    ctx.globalAlpha = snowflake.o;
+    ctx.beginPath();
+    ctx.arc(snowflake.x, snowflake.y, snowflake.r, 0, Math.PI * 2, false);
+    ctx.closePath();
+    ctx.fill();
+
+    if (snowflake.y > height) {
+      snowflake.reset();
+    }
+  }
+
+  requestAnimFrame(update);
+}
+
+function onResize() {
+  width = sky.clientWidth;
+  height = sky.clientHeight;
+  canvas.width = width;
+  canvas.height = height;
+  ctx.fillStyle = '#FFF';
+
+  var wasActive = active;
+  active = width > 600;
+
+  if (!wasActive && active) {
+    requestAnimFrame(update);
+  }
+}
+
+// shim layer with setTimeout fallback
+window.requestAnimFrame = (function() {
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
+
+onResize();
+window.addEventListener('resize', onResize, false);
+
+sky.appendChild(canvas);
+
+var gui = new dat.GUI();
+gui.add(window, 'particleCount').min(1).max(particleMax).step(1).name('Particles count').onFinishChange(function() {
+  requestAnimFrame(update);
+});
+</script>
+
+<script>
+var end = new Date('12/16/2017 12:00 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('countdown').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('countdown').innerHTML = days + ' Days ';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script>
+
+</body></html>
