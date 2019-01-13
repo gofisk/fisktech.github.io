@@ -1,1 +1,0 @@
-var ASB_pop = '<div class="poppy"><img src="images/popup/ASB.jpg" ><div class="poppy2"><h3>Administrative Services Building</h3><ul><li><a target="_blank" href="#">Building Information</a></li><li><a target="_blank" href="#">Find Nearby Parking</a></li><li><a target="_blank" href="#">View Departments</a></li></ul></div></div>';
