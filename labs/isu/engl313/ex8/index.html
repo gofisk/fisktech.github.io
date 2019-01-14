@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>jQuery UI - Excercise #8</title>
+	<link href="css/jquery-ui.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="external/jquery/jquery.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/datepicker.js"></script>
+</head>
+<body>
+
+<h1>Snoopy &amp; Friends <i class="fa fa-heart"></i> jQuery UI!</h1>
+<p>(Try moving them around the page. Cool, right?)</p>
+    
+<div class="characters">
+    <img class="drag" src="images/snoopy.png" />
+    <img class="drag" src="images/cb.png" />
+    <img class="drag" src="images/linus.png" />
+</div>
+    
+<!--DATEPICKER-->
+<div class="date-picker">
+	<div class="input">
+		<div class="result">Book Snoopy &amp; Friends<span></span></div>
+		<button><i class="fa fa-calendar"></i></button>
+	</div>
+	<div class="calendar"></div>
+</div>
+    
+<!--ACCORDION-->
+<div id="accordion">
+	<h3>Snoopy</h3>
+	<div>Snoopy says hello!</div>
+	<h3>Charlie Brown</h3>
+	<div>Charlie Brown says hello!</div>
+	<h3>Linus</h3>
+	<div>Linus says hello!</div>
+</div>
+    
+<!--TABS-->
+<div id="tabs">
+	<ul>
+		<li><a href="#tabs-1">Visa</a></li>
+		<li><a href="#tabs-2">MasterCard</a></li>
+		<li><a href="#tabs-3">AmEx</a></li>
+        <li><a href="#tabs-4">Paypal</a></li>
+	</ul>
+	<div id="tabs-1">Pay with your Visa Card</div>
+	<div id="tabs-2">Pay with your MasterCard</div>
+	<div id="tabs-3">Pay with your American Express Card</div>
+    <div id="tabs-4">Pay with your PayPal Account</div>
+</div>
+
+<script>
+    $(".drag").draggable({containment: "parent", axis: "x"});
+    $("#accordion").accordion();
+    $("#tabs").tabs();
+</script>
+
+</body>
+</html>

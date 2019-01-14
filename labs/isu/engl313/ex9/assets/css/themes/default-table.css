@@ -1,0 +1,37 @@
+/* Copyright (C) Scott Benjamin Fisk - All Rights Reserved
+ * Unauthorized copying of this file via any medium is strictly prohibited
+ * This file may contain proprietary code and/or confidential information
+ * Written by Scott Benjamin Fisk <dev@gofisk.com>, March 2017
+ */
+
+.wrapper {
+    border: 6px solid #666;
+}
+table.ehsTable thead {
+    background-color: #333;
+}
+table.ehsTable thead tr th {
+    color: white;
+}
+table.ehsTable thead tr th a{
+    color: #fff !important;
+}
+table.ehsTable tbody tr td {
+    border: 1px solid black;
+}
+table.ehsTable tbody tr:nth-of-type(odd) {
+    background-color: #ffffff;
+}
+table.ehsTable tbody tr:nth-of-type(even) {
+    background-color: #efefef;
+}
+
+@media (max-width: 560px) {
+    table.ehsTable tbody tr {
+        border: 1px solid #ababab;
+        border-top: 7px solid #cc3333;
+    }
+    table.ehsTable tbody tr td {
+    border: none;
+    }
+}

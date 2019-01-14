@@ -1,0 +1,138 @@
+/* Copyright (C) Scott Benjamin Fisk - All Rights Reserved
+ * Unauthorized copying of this file via any medium is strictly prohibited
+ * This file may contain proprietary code and/or confidential information
+ * Written by Scott Benjamin Fisk <dev@gofisk.com>, March 2017
+ */
+
+/*=============*/
+/*GLOBAL STYLES*/
+/*=============*/
+
+body {
+    background-color: #eeeeee;
+    color: #555;
+}
+
+/*==========*/
+/*TYPOGRAPHY*/
+/*==========*/
+
+h1, h2, h3, h4, h5, h6, blockquote {
+    color: #333 !important;
+}
+
+.redText {
+    color: #008fff !important;
+}
+
+.whiteText {
+    color: #000000 !important;
+}
+
+.ribbon {
+    background-color: #008fff;
+    color: #FFFFFF !important;
+}
+
+.ribbon {
+    background-color: #008fff;
+    color: #FFFFFF !important;
+}
+
+#meeting {
+    background-color: #008fff;
+}
+
+.highlightedText {
+    background: yellow;
+}
+
+/*===========*/
+/*LINK STYLES*/
+/*===========*/
+
+a {
+    color: #f85c37;
+}
+
+a:hover,
+a:focus {
+    color: #008fff;
+}
+
+/*==============*/
+/*BOOTSTRAP MODS*/
+/*==============*/
+
+hr {
+    background-color: #333;
+}
+
+.navbar {
+	background-color: #fff;
+    border-bottom: 2px solid #292c2f;
+}
+
+#navbar-title {
+    color: #292c2f;
+}
+
+#navbar-title span {
+    color: #333;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #292c2f;
+    font-weight: bold;
+    background-color: #fff;
+	border-bottom: 3px solid #292c2f;
+}
+
+.btn {
+	border: 5px solid transparent;
+}
+
+.btn-theme {
+    color: #ffffff!important;
+    background-color: #00b80e!important;
+}
+
+.btn-gold {
+    color: #008fff;
+    background-color: #F1BE48;
+}
+
+.btn-facebook {
+    color: #ffffff!important;
+    background-color: #3b5998!important;
+}
+
+.btn-twitter {
+    color: #ffffff!important;
+    background-color: #00aced!important;
+}
+
+/*==================*/
+/* SECTION SPECIFIC */
+/*==================*/
+
+#section-white {
+    background-color: #fff;
+}
+
+#section-slate{
+    background-color: #292c2f;
+}
+
+/*===================*/
+/* SUB FOOTER STYLES */
+/*===================*/
+#footer {
+	background-color: none;
+    color: #292c2f !important;
+}
+
+#footer a {
+    color: #292c2f !important;
+    text-decoration: underline;
+}
