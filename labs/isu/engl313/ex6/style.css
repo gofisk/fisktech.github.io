@@ -1,0 +1,20 @@
+body {
+    background-color: #eee;
+    color: black;
+}
+
+button {
+    background: red;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    border: 1px solid red;
+}
+
+#examples {
+    display: none;
+}
+
+#content {
+    display: none;
+}

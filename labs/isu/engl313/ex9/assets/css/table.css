@@ -1,0 +1,56 @@
+/* Copyright (C) Scott Benjamin Fisk - All Rights Reserved
+ * Unauthorized copying of this file via any medium is strictly prohibited
+ * This file may contain proprietary code and/or confidential information
+ * Written by Scott Benjamin Fisk <dev@gofisk.com>, March 2017
+ */
+
+table.ehsTable {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+table.ehsTable thead tr th {
+    padding: 12px 0;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: center;
+}
+table.ehsTable tbody tr td {
+    text-align: center;
+    padding: 8px;
+}
+
+@media (max-width: 560px) {
+    /* Change away from table layout */
+    table, thead, tbody, th, tr, td {
+        display: block;
+        width: 100%;
+    }
+    
+    table.ehsTable thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    table.ehsTable tbody tr {
+        border-collapse: collapse;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+    table.ehsTable tbody tr td {
+        border: none;
+        padding: 0px;
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+    /*UPDATE TITLE*/
+    table.ehsTable tbody tr td:nth-child(1) {
+        font-size: 22px;
+        font-weight: 300;
+    }
+    
+    /*UPDATE FRIENDLY DATE*/
+    table.ehsTable tbody tr td:nth-child(2) {
+        margin-bottom: 5px;
+    }
+}

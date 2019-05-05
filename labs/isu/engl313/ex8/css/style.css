@@ -1,0 +1,148 @@
+body {
+    font-family: "Trebuchet MS", sans-serif;
+    margin: 50px;
+    text-align: center;
+    min-width: 768px;
+}
+
+.characters {
+    margin-top: 50px;   
+}
+
+i {
+    color: #cc0000;
+}
+
+#accordion {
+  width: 48%;
+  margin: 5px;
+  float: left;
+}
+
+#tabs {
+  width: 48%;
+  margin: 5px;
+  float: right;
+}
+
+/*DATE PICKER STYLES*/
+
+.date-picker {
+  margin-top: 30px;
+  height: auto;
+  max-height: 50px;
+  background: #cc0000;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s 0s ease-in-out;
+  transition: all 0.3s 0s ease-in-out;
+}
+.date-picker i {
+  color: #f1be48;
+}
+.date-picker .input {
+  width: 100%;
+  height: 50px;
+  font-size: 0;
+  cursor: pointer;
+}
+.date-picker .input .result, .date-picker .input button {
+  display: inline-block;
+  vertical-align: top;
+}
+.date-picker .input .result {
+  width: calc(100% - 50px);
+  height: 50px;
+  line-height: 50px;
+  font-size: 16px;
+  padding: 0 10px;
+  color: #f1be48;
+  box-sizing: border-box;
+}
+.date-picker .input button {
+  width: 50px;
+  height: 50px;
+  background-color: #444;
+  color: white;
+  line-height: 50px;
+  border: 0;
+  font-size: 18px;
+  padding: 0;
+}
+.date-picker .input button:hover {
+  background-color: #cc0000;
+}
+.date-picker .input button:focus {
+  outline: 0;
+}
+.date-picker .calendar {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  border-radius: 0px;
+  overflow: hidden;
+}
+.date-picker .ui-datepicker-inline {
+  position: relative;
+  width: 100%;
+}
+.date-picker .ui-datepicker-header {
+  height: 100%;
+  line-height: 60px;
+  background: #8392A7;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.date-picker .ui-datepicker-prev {
+  background-color: #f1be48;
+  border-radius: 50%;
+}
+
+.date-picker .ui-datepicker-next {
+  background-color: #f1be48;
+  border-radius: 50%;
+}
+
+.date-picker .ui-datepicker-title {
+  text-align: center;
+}
+.date-picker .ui-datepicker-calendar {
+  width: 100%;
+  text-align: center;
+}
+.date-picker .ui-datepicker-calendar thead tr th span {
+  display: block;
+  width: 100%;
+  color: #8392A7;
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+.date-picker .ui-state-default {
+  display: block;
+  text-decoration: none;
+  color: #b5b5b5;
+  line-height: 40px;
+  font-size: 12px;
+}
+.date-picker .ui-state-default:hover {
+  background: rgba(0, 0, 0, 0.02);
+}
+.date-picker .ui-state-highlight {
+  color: #cc0000;
+}
+.date-picker .ui-state-active {
+  color: #cc0000;
+  background-color: rgba(131, 146, 167, 0.12);
+  font-weight: 600;
+}
+.date-picker .ui-datepicker-unselectable .ui-state-default {
+  color: #eee;
+  border: 2px solid transparent;
+}
+.date-picker.open {
+  max-height: 500px;
+}
+.date-picker.open .input button {
+  background: #cc0000;
+}

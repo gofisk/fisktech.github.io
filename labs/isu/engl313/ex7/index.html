@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8'>
+<meta name="robots" content="noindex">
+<title>FlexBox &amp; AngularJS Demo</title>
+<link href="css/style.css" type="text/css" rel=stylesheet />
+</head>
+<body>  
+<!--START ANGULAR APP-->
+<div id="startAngular" ng-app="313counties" ng-controller="313controller">
+    <center>
+        <img id="loading" src="img/loading.gif" ng-show="loading"/>
+        <h2 class="white" ng-show="loading">Loading...</h2>
+    </center>
+    <div class="inputHolder ng-hide" id="filters" ng-hide="loading">
+        <input type="text" id="countySearch" class="form-control" placeholder="Search Counties..." ng-model="search.$" style="min-width: 100%;" />
+        <div ng-if="filtered.length < countyData.length">
+            <p id="count">Showing
+                <strong ng-bind="filtered.length"></strong><strong>/</strong><strong ng-bind="countyData.length"></strong> Counties
+            </p>
+        </div>
+    </div><!--./inputHolder-->
+    <div class="ng-hide" ng-hide="loading">
+            <div ng-hide="loading">
+                <ul class="list">
+                    <li class="list-item" ng-repeat="entry in countyData | orderBy:sortType:sortReverse | filter:search | filter:query as filtered">
+                        <a class="list-content" href="http://google.com">
+                        <h2 ng-bind="entry.name + ' County'"></h2>
+                        <img ng-src="{{entry.image}}"/>
+                        <p ng-bind="'Established: ' + entry.founded"></p>
+                        </a>
+                    </li> 
+                </ul>
+                <span ng-show="(countyData | filter:search).length == 0">
+                <h2 id="matchMessage">No Results</h2>
+                <a id="matchButton" ng-click="search = undefined" onclick="focusSearch()">Clear Search</a>
+                </span>           
+            </div><!--Loading-->
+    </div><!--./ng-hide-->
+</div><!--./startAngular-->
+<!--ANGULAR JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-utils/0.1.1/angular-ui-utils.min.js"></script>
+<!-- jQuery Library --> 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/counties.js"></script>
+</body>
+</html>

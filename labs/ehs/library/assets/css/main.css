@@ -1,0 +1,403 @@
+/*
+ * Author: Scott Fisk
+ * Website: https://gofisk.com
+ * ISU STUDENT GOVERNMENT
+ */
+
+
+/*=============*/
+/*GLOBAL STYLES*/
+/*=============*/
+
+body {
+    font-family: "Univers";
+    font-weight: 300;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    margin-top: 70px;
+}
+
+/*=============*/
+/*UNIVERSE FONT*/
+/*=============*/
+
+@font-face {
+    font-family: Univers;
+    src: url("../fonts/Univers.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: bold;
+    src: url("../fonts/Univers-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Univers;
+    font-weight: lighter;
+    src: url("../fonts/Univers-Light.otf") format("opentype");
+}
+
+/*==========*/
+/*TYPOGRAPHY*/
+/*==========*/
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Univers";
+    font-weight: 300;
+}
+
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.mt {
+	margin-top: 40px;
+}
+
+.ribbon {
+    padding: 10px;
+    font-weight: 800;
+}
+
+#meeting {
+    padding-top: 12px;
+    padding-left: 15px;
+}
+
+#timer {
+    font-weight: 800;
+}
+
+.errorCode {
+    font-size: 200px;
+    font-weight: 800;
+    margin-bottom: -50px;
+}
+
+.errorMessage {
+    margin-top: 50px;
+    word-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+    .errorCode {
+        font-size: 50px;
+        padding-top: 10px;
+    }
+    
+    .errorMessage {
+        font-size: 10px;
+        margin-top: 50px;
+    }
+    
+    .errorMessage h2 {
+        font-size: 25px;
+    }
+}
+
+/*===========*/
+/*LINK STYLES*/
+/*===========*/
+
+a {
+    word-wrap: break-word;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+/*============*/
+/*ANCHOR LINKS*/
+/*============*/
+
+@media (max-width: 1024px) {
+    :target:before {
+        content:"";
+        display:block;
+        height:60px;
+        margin:-70px 0 0;
+    }
+}
+
+@media (min-width: 1024px) {
+    :target:before {
+        content:"";
+        display:block;
+        height:100px;
+        margin:-40px 0 0;
+    }
+}
+
+/*================*/
+/* CONTENT STYLES */
+/*================*/
+
+.content {
+    padding: 20px 0px;
+    margin-bottom: 0px;
+}
+
+/*==============*/
+/*BOOTSTRAP MODS*/
+/*==============*/
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.navbar {
+	font-weight: 100;
+	font-size: 14px;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+.dropdown:hover .top-level {
+    display: block;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -6px;
+    margin-left: -1px;
+    -webkit-border-radius: 0 6px 6px 6px;
+    -moz-border-radius: 0 6px 6px;
+    border-radius: 0 6px 6px 6px;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+    border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+#menuButton {
+    border-radius: 0px;
+    color: #292c2f;
+}
+
+#navbar-title {
+    font-size: 40px;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+#logo {
+    margin-top: 15px;
+}
+
+@media (max-width: 1000px) {
+    #navbar-title {
+        padding-left: 15px;
+    }
+}
+
+#navbar-title span {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.btn {
+	padding: 10px 30px;
+	margin: 5px 0px;
+	font-size: 18px;
+    font-weight: 800;
+	border-radius: 0px;
+    white-space: normal;
+}
+
+.btn-margin {
+    margin-top: 10px;
+}
+
+.lead {
+	letter-spacing: 1px;
+}
+
+.thumbnail {
+    padding:0;
+}
+
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+/*===============*/
+/* WIDGET STYLES */
+/*===============*/
+
+.widget {
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+
+@media (min-width: 1000px) {
+    .widget {
+        margin-top: -10px;
+    }
+}
+
+.widget h3 {
+    padding: 12px 0px 9px 15px;
+    font-weight: 800;
+    border-bottom: 3px solid black;
+}
+
+.widget h4 {
+    padding: 5px 15px 0px 15px;
+}
+
+/*================*/
+/* PROJECT STATUS */
+/*================*/
+
+/*YELLOW*/
+.on_hold {
+    font-weight: bold;
+}
+
+/*GREEN*/
+.in_progress {
+    font-weight: bold;
+}
+
+/*RED*/
+.abandoned {
+    font-weight: bold;
+}
+
+/*GRAY*/
+.completed {
+    font-weight: bold;
+}
+
+/*BLUE*/
+.planning {
+    font-weight: bold;
+}
+
+/*ORANGE*/
+.ongoing {
+    font-weight: bold;
+}
+
+/*===================*/
+/* SOCIAL ICON LINKS */
+/*===================*/
+#social {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+#social i {
+    font-size: 100px;
+    color: #fff !important;
+}
+
+@media screen and (max-width: 475px) {
+    #social {
+        width: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    #social i {
+        font-size: 80px;
+    }
+}
+
+#social .col-md-4 {
+    padding:30px;
+}
+
+/*===================*/
+/* SUB FOOTER STYLES */
+/*===================*/
+#footer {
+	padding-top: 25px;
+}
+
+#footer p {
+	text-align: center;
+	font-weight: 400;
+}
+
+/*================*/
+/* HIDE ON DESKTOP*/
+/*================*/
+
+@media (min-width: 1025px) {
+    .hideOnDesktop{
+        display: none;
+    }
+}
+
+/*===============*/
+/* HIDE ON MOBILE*/
+/*===============*/
+
+@media (max-width: 1024px) {
+    .hideOnMobile{
+        display: none;
+    }
+}

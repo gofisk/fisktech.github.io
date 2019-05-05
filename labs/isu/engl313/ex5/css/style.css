@@ -1,0 +1,120 @@
+/*===============GENERAL===============*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+	height: 100%;
+	font-family: sans-serif;
+	font-weight: 400;
+}
+
+body {
+	background: #2ecc71;
+}
+
+/*===============TEXT STYLE===============*/
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	line-height: 1.4;
+}
+
+h2 {
+	font-size: 28px;
+	letter-spacing: -2px;
+	color: #6d819c;
+	text-align: center;
+	line-height: 2.8;
+}
+
+/*===============WINDOW===============*/
+
+.window {
+	width: 700px;
+	height: 250px;
+	background-color: #dddfe6;
+	border-radius: 0px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	box-shadow: 0 10px 24px rgba(37,44,65,0.32);
+}
+
+/*===============MAIN BOX===============*/
+
+#main {
+	width: 100%; /*Half of Window Width*/
+	height: 100%; /*Same as Window Height*/
+	padding: 0 30px;
+	float: left;
+	background-color: #f4f5f9;
+	z-index: 1; 
+    text-align: center;
+}
+
+#main p:hover {
+    /*EXAMPLE 7 - TRANSLATE*/
+    transform: translateY(-5px);
+}
+
+#main:hover p:after{
+    content: 'AWESOME!';
+}
+
+button {
+    background: #428BCA;
+    color: #fff;
+    font-family: Sans-serif;
+    font-size: 20px;
+    height: 60px;
+    width: 150px;
+    line-height: 60px;
+    margin: 25px 25px;
+    text-align: center;
+    border: 0;  
+}
+
+#btn1 {
+    /*EXAMPLE 3 - TRANSITION*/
+    transition: opacity 2s;
+    /*EXAMPLE 4 - EASE IN*/
+    transition: all 2s ease-in;
+}
+
+#btn1:hover {
+    /*EXAMPLE 8 - TRANSFORM SCALE*/
+    transform: scale(0.8);
+    opacity: 0.2;
+}
+
+#btn2 {
+    /*EXAMPLE 1 - TRANSITION*/
+    transition: background-color 2s;
+    /*EXAMPLE 5 - EASE OUT*/
+    transition: all 2s ease-out;
+}
+
+#btn2:hover {
+    background-color: red
+}
+
+#btn3 {
+    /*EXAMPLE 2 - TRANSITION*/
+    transition: padding 2s;
+    /*EXAMPLE 6 - LINEAR*/
+    transition: all 2s linear;
+}
+
+#btn3:hover {
+    /*EXAMPLE 9 - TRANSFORM SCALE*/
+    transform: scale(1.2);
+    padding-left: 75px;
+}
+
+/*EXAMPLE 10 - Buttons 1 and 2 use a transition and transform*/

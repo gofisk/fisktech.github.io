@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Ping-Pong Client</title>
+<link rel="stylesheet" href="css/style.css">
+<meta name="viewport" content="user-scalable=no" />
+</head>
+<body ng-app="bcbsmn_it_pp" ng-controller="score">
+	<div class="main" ng-if="!match.gameStarted">
+		<div class="scoreBoard">
+			<div class="display">
+				<div class="player">
+					<h2>Go to /admin from a mobile device to setup the game.</h2>
+				</div>
+			</div>
+		</div>
+		<footer class="menu">
+			<div class="datetime" id="date"></div>
+			<div><h2>PING&nbsp;PONG</h2></div>
+			<div class="datetime" id="time">View Tutorial</div>
+		</footer>
+	</div>
+  
+	<div class="score" ng-if="match.gameStarted && (match.players[0].serving || match.players[1].serving)">
+		<span ng-class="{'loser':match.players[0].loser}" ng-bind="match.players[0].score"></span>
+		<span ng-class="{'loser':match.players[1].loser}" ng-bind="match.players[1].score"></span>
+	</div>
+  
+	<div class="main" ng-if="match.gameStarted">
+		<div class="scoreBoard">
+			<div class="display left" ng-class="{'isServing':match.players[0].serving}">
+				<header ng-class="{'isServing':match.players[0].serving, 'isNotServing':!match.players[0].serving}" ng-bind="match.players[0].name"></header>
+				<div class="player player-left" ng-class="{'loser':match.players[0].loser}"></div>
+			</div>
+			<div class="display right" ng-class="{'isServing':match.players[1].serving}">
+				<header ng-class="{'isServing':match.players[1].serving, 'isNotServing':!match.players[1].serving}" ng-bind="match.players[1].name"></header>
+				<div class="player player-right" ng-class="{'loser':match.players[1].loser}"></div>
+			</div>
+		</div>
+		<footer>
+			<span ng-bind="match.footerMessage"></span>&nbsp;
+			<div ng-hide="match.gameStarted" class="datetime" id="time"></div>
+		</footer>
+	</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-route.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.13/angular-animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.0-beta.6/angular-touch.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.2/firebase.js"></script>
+<script src="https://cdn.firebase.com/libs/angularfire/1.0.0/angularfire.min.js"></script>
+<script src="js/main.js"></script>
+</html>
