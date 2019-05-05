@@ -1,0 +1,94 @@
+body {
+  margin:0;
+  font-family: 'Open Sans', sans-serif;
+  background: #eee;
+}
+
+hr {
+  background:#dedede;
+  border:0;
+  height:1px;
+}
+
+.wrap {
+  width: 950px;
+  margin:25px auto;
+}
+
+.blog {
+  float:left;
+}
+
+.blog-content {
+  max-width: 600px;
+  margin:25px auto;
+  padding:25px;
+  background: #fff;
+  border:1px solid #dedede;
+  -webkit-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+  -moz-box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+  box-shadow: 1px 1px 1px 0px rgba(204,204,204,0.35);
+}
+
+.blog-content img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.blog-content h1 {
+  margin:0 0 15px;
+  padding:0;
+  font-weight: normal;
+  color: #666;
+}
+
+.blog-content p:last-child {
+  margin: 0;
+}
+
+.blog-content .continue {
+  color:#000;
+  font-weight: 700; 
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.blog-content .continue:hover {
+  margin-left:10px;
+}
+
+.post-info {
+  float: right;
+  margin: -10px 0 15px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+}
+ 
+
+
+
+ 
+/*TWITTER FEED*/
+
+.twitter-timeline {
+  max-width: 100%;
+  max-height: 1000px;
+}
+.fa {
+  font-size: 25px;
+  color: #FFFFFF;
+}
+.panel-title {
+ font-size: 25px; 
+ color: #FFFFFF;
+ font-family: 'Open Sans', sans-serif;
+}
+.panel-heading {
+ background-color: #1da1f2 !important;
+ color: #1da1f2 !important;
+}
+.panel {
+ margin-top: 25px;
+}
